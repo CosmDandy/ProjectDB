@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Заметки</title>
+</head>
+<body>
+<div class="menu">
+    <div class="menu_logo">
+        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.html';">
+    </div>
+    <div>
+        <div class="submenu" onclick="javascript:location.href='main.html';">
+            <img alt="#" src="photos/menu.png">
+        </div>
+        <div class="submenu" onclick="javascript:location.href='new_note.html';">
+            <img alt="#" src="photos/writing.png">
+        </div>
+        <div class="submenu" onclick="javascript:location.href='acc.html';">
+            <img alt="#" src="photos/user.png">
+        </div>
+    </div>
+    <div class="menu_logout" onclick="javascript:location.href='logout.html';">
+        <img alt="#" src="photos/logout.png">
+    </div>
+</div>
+<div class="content_wrapper">
+    <div class="content">
+        <div class="search">
+            <form name="search" method="get" action="">
+                <label for="user_search">
+                    <input type="text" name="user_search" id="user_search">
+                </label>
+                <button type="submit">
+                    <img  alt="#" src="photos/search.png">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="">
+
+            </div>
+            <div class="">
+                <p>Дата: <?php echo $note ['created']; ?></p>
+            </div>
+            <div class="">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

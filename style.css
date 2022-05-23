@@ -33,13 +33,13 @@ button {
 }
 
 .submenu:hover, .menu_logo:hover, .menu_logout:hover {
-    background-color: rgba(127, 255, 212, 0.46);
-    transition-duration: 0.45s;
+    filter: invert(0.35);
+    transition-duration: 0.3s;
 }
 
-.content {
+.content_wrapper {
     float: right;
-    width: calc(calc(100% - 4em) - 1em);
+    width: calc(calc(100% - 4em) - 0.5em);
 }
 
 .search {
@@ -86,7 +86,7 @@ button {
     filter: invert(1);
 }
 
-.notes {
+.content {
     display: flex;
     width: 45em;
     height: fit-content;
@@ -107,4 +107,41 @@ button {
 .block h2, p {
     margin: 0 0 1em 0;
     color: white;
+}
+
+.button {
+    padding: 10px;
+    color: #d0d7de;
+    background: none;
+    border-radius: 6px;
+    border: 1px solid #627597;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #464646;
+    transition-duration: 0.3s;
+}
+
+/* New Note */
+
+.block_c input, textarea {
+    width: calc(100% - 1em);
+    font-size: 1em;
+    height: 2em;
+    padding: 0 0.5em;
+    background-color: #222222 !important;
+    border: 1px solid #686868;
+    border-radius: 0.4em;
+    color: white;
+}
+
+.block_b {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.block_b {
+    padding: 0 0.5em;
 }

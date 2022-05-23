@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Document</title>
 </head>
 <body>
@@ -35,21 +35,21 @@ if (!empty($where_list)) {
 ?>
 <div class="menu">
     <div class="menu_logo">
-        <img alt="#" src="photos/house.png">
+        <img alt="#" src="house.png">
     </div>
     <div>
         <div class="submenu">
-            <img  alt="#" src="photos/menu.png">
+            <img  alt="#" src="menu.png">
         </div>
         <div class="submenu">
-            <img  alt="#" src="photos/writing.png">
+            <img  alt="#" src="writing.png">
         </div>
         <div class="submenu">
-            <img  alt="#" src="photos/user.png">
+            <img  alt="#" src="user.png">
         </div>
     </div>
     <div class="menu_logout">
-        <img  alt="#" src="photos/logout.png">
+        <img  alt="#" src="logout.png">
     </div>
 </div>
 <div class="content">
@@ -60,7 +60,7 @@ if (!empty($where_list)) {
                     <input type="text" name="user_search" id="user_search">
                 </label>
                 <button type="submit">
-                    <img  alt="#" src="photos/search.png">
+                    <img  alt="#" src="search.png">
                 </button>
             </form>
         </div>
