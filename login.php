@@ -23,7 +23,7 @@ $login_arr_q = mysqli_query($link, "SELECT login FROM users");
 $pass_arr_q = mysqli_query($link, "SELECT password FROM users");
 while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetch_array($pass_arr_q)) {
     if ($login_arr[0] == $login and $pass_arr[0] == $pass) {
-        $_SESSION['user_id'] = mysqli_fetch_array(mysqli_query($link, "SELECT user_id FROM users WHERE login = '$login_arr[0]' and password = '$pass_arr[0]'"));
+        $_SESSION['user_id'] = mysqli_fetch_array(mysqli_query($link, "SELECT id FROM users WHERE login = '$login_arr[0]' and password = '$pass_arr[0]'"));
         $_SESSION['status'] = mysqli_fetch_array(mysqli_query($link, "SELECT privileges FROM users WHERE login = '$login_arr[0]' and password = '$pass_arr[0]'"));
         $_SESSION['auth'] = 1;
         header('Location: ' . 'main.php');
@@ -49,5 +49,6 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
             </div>
         </form>
     </div>
+</div>
 </body>
 </html>
