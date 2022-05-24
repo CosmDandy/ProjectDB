@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="windows-1251">
-    <title>Регистрация</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
 <?php
 require_once("Connections/project_con.php");
 
@@ -22,6 +14,14 @@ if ($submit) {
     $new_user = mysqli_query($link, $insert_query);
     header('Location: ' . 'main.php');
 } ?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 <div class="content" style="width: 25em; margin-top: 30vh">
     <div class="block">
         <form id="register" name="register" method="POST" action="">

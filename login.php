@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="windows-1251">
-    <title>Войти</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
 <?php
 require_once("Connections/project_con.php");
 
@@ -32,6 +24,14 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
     header('Location: ' . 'main.php');
 }
 ?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251">
+    <title>Войти</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 <div class="content" style="width: 25em; margin-top: 30vh">
     <div class="block">
         <form name="login" autocomplete="on" method="post" action="">

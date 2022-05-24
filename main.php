@@ -1,11 +1,3 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="windows-1251">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Заметки</title>
-</head>
-<body>
 <?php
 require_once("Connections/project_con.php");
 
@@ -32,7 +24,14 @@ if (!empty($where_list)) {
     $res_query = mysqli_query($link, $where_list);
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Заметки</title>
+</head>
+<body>
 <!-- Menu -->
 <div class="menu">
     <div class="menu_logo">
