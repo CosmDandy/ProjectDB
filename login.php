@@ -42,7 +42,7 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
                 <input type="password" name="pass" id="pass" value="1">
             </div>
             <div class="block_b">
-                <a href="reg.php" class="button">Зарегистрироваться</a>
+                <a href="register.php" class="button">Зарегистрироваться</a>
                 <input type="submit" name="login_b" id="login_b" value="Войти" class="button">
             </div>
         </form>
