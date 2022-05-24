@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="windows-1251">
     <title>Войти</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php
-session_start();
-$link = mysqli_connect('localhost', 'root', 'root');
-$select_db = mysqli_query($link, "USE project");
+require_once("Connections/project_con.php");
 
 $login = $_POST['login'];
 $pass = $_POST['pass'];
@@ -38,10 +36,10 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
     <div class="block">
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
-                <input type="text" name="login" id="login" value="test_log">
+                <input type="text" name="login" id="login" value="1">
             </div>
             <div class="block_c" style="margin: 1.2em 0;">
-                <input type="password" name="pass" id="pass" value="test_pass">
+                <input type="password" name="pass" id="pass" value="1">
             </div>
             <div class="block_b">
                 <a href="reg.php" class="button">Зарегистрироваться</a>

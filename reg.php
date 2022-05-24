@@ -1,26 +1,39 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="windows-1251">
     <title>Регистрация</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-<div class="content" style="width: 25em; margin-top: 30vh">
-    <div class="block">
-        <form name="reg" autocomplete="on" method="post" action="">
-            <div class="block_c">
-                <input type="text" name="login" id="login" value="login">
-            </div>
-            <div class="block_c" style="margin: 1.2em 0;">
-                <input type="password" name="password" id="password" value="password">
-            </div>
-            <div class="block_b">
-                <a href="login.php" class="button">Войти</a>
-                <input type="submit" name="reg" id="reg" value="Зарегистрироваться" class="button">
-            </div>
-        </form>
-    </div>
-</div>
+<form id="register" name="register" method="POST">
+    <input name="login" type="text" autofocus="autofocus" required="required" id="login" placeholder="Имя пользователя" size="30" maxlength="30"><br>
+    <input name="password" type="text" required="required" id="password" placeholder="Пароль" size="30" maxlength="30"><br>
+    <input name="email" type="text" id="email" placeholder="Электронная почта" size="30" maxlength="30">
+    <input type="hidden" value="u" name="rights" id="rights">
+    <input name="submit" type="submit" id="submit" value="Регистрация">
+    <input type="hidden" name="MM_insert" value="register">
+</form>
+
+<?php
+require_once("Connections/project_con.php");
+
+$submit = $_POST["submit"];
+$login = $_POST["login"];
+$password = $_POST["password"];
+$privileges = $_POST["rights"];
+$email = $_POST["email"];
+if($submit)
+{
+    $insert_query = "INSERT INTO users (login, password, privileges, email)
+    VALUES('$login', '$password', '$privileges', '$email')";
+    $key = 111;
+    mail($email, "Код подтверждения", $key);
+    $new_user = mysqli_query($link, $insert_query);
+}
+?>
+
+
 </body>
 </html>

@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="windows-1251">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Заметки</title>
 </head>
 <body>
 <?php
-session_start();
-$user = $_SESSION['user_id'][0];
-$link = mysqli_connect('localhost', 'root', 'root');
-$select_db = mysqli_query($link, "USE project");
-$select_note = mysqli_query($link, "SELECT * FROM notes WHERE user_id = '$user' ORDER BY created DESC ");
+require_once("Connections/project_con.php");
 
+$user = $_SESSION['user_id'][0];
+$select_note = mysqli_query($link, "SELECT * FROM notes WHERE user_id = '$user' ORDER BY created DESC ");
 $user_search = str_replace(',', ' ', $_GET['user_search']);
 $search_words = explode(' ', $user_search);
 
