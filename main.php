@@ -1,7 +1,7 @@
 <?php
 require_once("Connections/project_con.php");
 
-if (!$_SESSION['auth'] and ($_SESSION['status'] < 1)) {
+if (!$_SESSION['auth']) {
     header('Location: ' . 'login.php');
 }
 
@@ -45,10 +45,10 @@ if (!empty($where_list)) {
         <div class="submenu" onclick="javascript:location.href='main.php';">
             <img alt="#" src="photos/menu.png">
         </div>
-        <div class="submenu" onclick="javascript:location.href='new_note.php';">
+        <div class="submenu" onclick="javascript:location.href='createNote.php';">
             <img alt="#" src="photos/writing.png">
         </div>
-        <div class="submenu" onclick="javascript:location.href='acc.php';">
+        <div class="submenu" onclick="javascript:location.href='account.php';">
             <img alt="#" src="photos/user.png">
         </div>
     </div>
