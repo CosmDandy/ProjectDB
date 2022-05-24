@@ -76,13 +76,13 @@ if (!empty($where_list)) {
             <div class="content">
                 <div class="block">
                     <div class="">
-                        <h2><?php echo $res_array['id'], "<br>"; ?></h2>
+                        <h2><?php echo $res_array['id']; ?></h2>
                     </div>
                     <div class="">
-                        <h2><?php echo $res_array['title'], "<br>"; ?></h2>
+                        <h2><?php echo $res_array['title']; ?></h2>
                     </div>
                     <div class="">
-                        <h2><?php echo $res_array['article'], "<br>", "<hr>", "<br>"; ?></h2>
+                        <h2><?php echo $res_array['article']; ?></h2>
                     </div>
                 </div>
             </div>
