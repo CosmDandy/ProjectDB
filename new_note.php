@@ -8,25 +8,25 @@
 <body>
 <div class="menu">
     <div class="menu_logo">
-        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.html';">
+        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
     </div>
     <div>
-        <div class="submenu" onclick="javascript:location.href='main.html';">
+        <div class="submenu" onclick="javascript:location.href='main.php';">
             <img alt="#" src="photos/menu.png">
         </div>
-        <div class="submenu" onclick="javascript:location.href='new_note.html';">
+        <div class="submenu" onclick="javascript:location.href='new_note.php';">
             <img alt="#" src="photos/writing.png">
         </div>
-        <div class="submenu" onclick="javascript:location.href='acc.html';">
+        <div class="submenu" onclick="javascript:location.href='acc.php';">
             <img alt="#" src="photos/user.png">
         </div>
     </div>
-    <div class="menu_logout" onclick="javascript:location.href='logout.html';">
+    <div class="menu_logout" onclick="javascript:location.href='logout.php';">
         <img alt="#" src="photos/logout.png">
     </div>
 </div>
 <div class="content_wrapper">
-    <div class="content">
+    <div class="content" style="padding-top: 30vh">
         <div class="block">
             <form name="new_note" autocomplete="on" method="post" action="">
                 <div class="block_c">
@@ -36,7 +36,7 @@
                     <textarea style="height: 10em; margin: 1.2em 0;" name="article" id="article"></textarea>
                 </div>
                 <div class="block_b">
-                    <a href="main.html" class="button">Отменить</a>
+                    <a href="main.php" class="button">Отменить</a>
                     <input type="submit" name="create" id="create" value="Создать" class="button">
                 </div>
             </form>
