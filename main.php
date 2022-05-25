@@ -64,7 +64,7 @@ if (!empty($where_list)) {
         <div class="search">
             <form name="search" method="get" action="">
                 <label for="user_search">
-                    <input type="text" name="user_search" id="user_search">
+                    <input type="search" name="user_search" id="user_search" placeholder="Search">
                 </label>
                 <button type="submit">
                     <img alt="#" src="Photos/search.png">
@@ -72,46 +72,51 @@ if (!empty($where_list)) {
             </form>
         </div>
     </div>
-    <?php if ($final_search_words[0] != "") {
-        while ($res_array = mysqli_fetch_array($res_query)) { ?>
-            <div class="content">
-                <div class="block block_main">
-                    <div class="">
-                        <h2><?php echo $res_array['id']; ?></h2>
-                    </div>
-                    <div class="">
-                        <h2><?php echo $res_array['title']; ?></h2>
-                    </div>
-                    <div class="">
-                        <h2><?php echo $res_array['article']; ?></h2>
-                    </div>
-                </div>
-            </div>
-        <?php }
-    } else { ?>
     <div class="content">
-        <?php while ($note = mysqli_fetch_array($select_note)) {
-            if (!($note['deleted'])) {
-                ?>
-                <div class="block block_main">
+        <?php if ($final_search_words[0] != "") { ?>
+            <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
+                <div class="block block_note" style="background: #<?php echo $res_array['color']; ?>"
+                     onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
                     <div>
                         <div class="note_head">
-                            <h2><?php echo $note['title']; ?></h2>
+                            <h2><?php echo $res_array['title']; ?></h2>
                         </div>
                         <div class="note_text">
-                            <h3><?php echo $note['article']; ?></h3>
+                            <h3><?php echo $res_array['article']; ?></h3>
                         </div>
                     </div>
                     <div class="block_b">
                         <div class="note_date">
-                            <p><?php echo $note['created']; ?></p>
+                            <p><?php echo $res_array['created']; ?></p>
                         </div>
-                        <button type="button" onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
-                            <img alt="#" src="Photos/edit-note.png">
-                        </button>
                     </div>
                 </div>
-            <?php } } }?>
+            <?php }
+        } else {
+            while ($note = mysqli_fetch_array($select_note)) {
+                if (!($note['deleted'])) { ?>
+                    <div class="block block_note" style="background: #<?php echo $note['color']; ?>"
+                         onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                        <div>
+                            <div class="note_head">
+                                <h2><?php echo $note['title']; ?></h2>
+                            </div>
+                            <div class="note_text">
+                                <h3><?php echo $note['article']; ?></h3>
+                            </div>
+                        </div>
+                        <div class="block_b">
+                            <div class="note_date">
+                                <p><?php echo $note['created']; ?></p>
+                            </div>
+                            <!--<button type="button" onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                            <img alt="#" src="Photos/edit-note.png">
+                        </button>-->
+                        </div>
+                    </div>
+                <?php }
+            }
+        } ?>
     </div>
 </div>
 </body>

@@ -24,27 +24,27 @@ $edit_note = mysqli_fetch_array ($result);
 <body>
 <!-- Menu -->
 <div class="menu">
-    <div class="menu_logo">
-        <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
-    </div>
+    <button type="button" class="submenu" onclick="javascript:location.href='account.php';">
+        <img alt="#" src="Photos/user.png">
+    </button>
     <div>
-        <div class="submenu" onclick="javascript:location.href='main.php';">
-            <img alt="#" src="Photos/menu.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='createNote.php';">
+        <button type="button" class="submenu">
+            <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='createNote.php';">
             <img alt="#" src="Photos/new-note.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='account.php';">
-            <img alt="#" src="Photos/user.png">
-        </div>
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='main.php';">
+            <img alt="#" src="Photos/menu.png">
+        </button>
     </div>
-    <div class="menu_logout" onclick="javascript:location.href='logout.php';">
+    <button type="button" class="submenu" onclick="location.href='logout.php';">
         <img alt="#" src="Photos/logout.png">
-    </div>
+    </button>
 </div>
 
 <div class="content_wrapper">
-    <div class="content" style="margin-top: 30vh">
+    <div class="content" style="margin-top: 20vh; height: 30em;">
         <div class="block">
             <form name="edit_note" autocomplete="on" method="post" action="">
                 <div class="block_c">

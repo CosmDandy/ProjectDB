@@ -32,20 +32,24 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="content" style="width: 25em; margin-top: 30vh">
-    <div class="block block_login">
+<div class="content" style="width: 22em; margin-top: 28vh">
+    <div class="block">
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
-                <input type="text" name="login" id="login" value="1">
+                <h3>Email address</h3>
+                <input type="text" name="login" id="login" value="1" placeholder="Login">
             </div>
             <div class="block_c" style="margin: 1.2em 0;">
-                <input type="password" name="pass" id="pass" value="1">
+                <h3>Password</h3>
+                <input type="password" name="pass" id="pass" value="1" placeholder="Password">
             </div>
-            <div class="block_b">
-                <a href="register.php" class="button">Зарегистрироваться</a>
-                <input type="submit" name="login_b" id="login_b" value="Войти" class="button">
+            <div>
+                <input type="submit" name="login_b" id="login_b" value="Войти" class="button" style="width: 100%; background-color: #2da44e;">
             </div>
         </form>
+    </div>
+    <div class="block">
+       <p>Нет аккаунта в заметках ?   <a href="register.php">Создать аккаунт</a></p>
     </div>
 </div>
 </body>

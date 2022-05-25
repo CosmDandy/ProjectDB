@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ececec;
+    background-color: #ffffff;
 }
 
 button {
@@ -40,7 +40,7 @@ p {
 
 .menu {
     position: fixed;
-    background-color: #222222;
+    background-color: #ffffff;
     width: 4.5em;
     height: calc(100vh - 2em);
     float: left;
@@ -48,11 +48,13 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 0.15em solid rgba(115, 115, 115, 0.5);
 }
 
 .menu img {
+    margin-top: 0.1em;
     width: 2em;
-    filter: invert(1);
+    filter: invert(0);
 }
 
 .block img {
@@ -61,12 +63,22 @@ p {
 }
 
 .submenu {
-    width: 100%;
-    height: 5em;
+    width: 4em;
+    height: 4em;
+    margin: 0.75em;
 }
 
-button img:hover {
-    filter: invert(0.35);
+.submenu:hover img {
+    filter: invert(1);
+    transition-duration: 0.3s;
+}
+
+.submenu:hover {
+    border-radius: 50%;
+    background-color: rgb(34 34 34);
+    width: 4em;
+    height: 4em;
+    margin: 0.75em;
     transition-duration: 0.3s;
 }
 
@@ -77,20 +89,18 @@ button img:hover {
     min-width: 9em;
     margin: 2em 2em;
     padding: 10px;
-    background-color: #222222;
     border: 1px solid #686868;
     border-radius: 0.5em;
 }
 
 .search input {
-    width: calc(100% - 1.1em);
+    width: 100%;
     font-size: 1em;
     height: 2em;
     padding: 0 0.5em;
-    background-color: #222222 !important;
+    background-color: #ffffff  !important;
     border: 1px solid #686868;
     border-radius: 0.4em;
-    color: white;
 }
 
 .search button {
@@ -98,7 +108,7 @@ button img:hover {
     height: 1.8em;
     width: 1.8em;
     position: absolute;
-    top: 0.4em;
+    top: 0.35em;
     right: 0.75em;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
@@ -112,7 +122,7 @@ button img:hover {
 .search img {
     width: 1.5em;
     padding: 0.1em;
-    filter: invert(1);
+    filter: invert(0);
 }
 
 .content_wrapper {
@@ -134,27 +144,35 @@ button img:hover {
 .block {
     position: relative;
     display: block;
+    width: 100%;
     margin: 1em;
     padding: 0.8em;
-    border: 1px solid #686868;
+    border: 0.1em solid #d8dee4;
     border-radius: 1em;
-    background-color: #222222;
-}
-
-.block_main {
-    height: 9em;
-    width: 9em;
-    min-width: 9em;
-}
-
-.block_login {
-
+    background-color: #f6f8fa;
 }
 
 .block h2, h3, p {
     margin: 0 0 0.2em 0;
-    color: white;
 }
+
+/* Block Main Note */
+.block_note {
+    height: 9em;
+    width: 9em;
+    min-width: 9em;
+    background-color: azure;
+}
+
+.block_note img {
+    filter: invert(0);
+}
+
+.block_note:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);    transition-duration: 0.3s;
+}
+
+/* Block B */
 
 .block_b {
     display: flex;
@@ -194,8 +212,7 @@ button img:hover {
     font-size: 1em;
     height: 2em;
     padding: 0 0.5em;
-    background-color: #222222 !important;
-    border: 1px solid #686868;
+    background-color: #ffffff  !important;
+    border: 1px solid #d8dee4;
     border-radius: 0.4em;
-    color: white;
 }

@@ -6,24 +6,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<!-- Menu -->
 <div class="menu">
-    <div class="menu_logo">
-        <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
-    </div>
+    <button type="button" class="submenu" onclick="javascript:location.href='account.php';">
+        <img alt="#" src="Photos/user.png">
+    </button>
     <div>
-        <div class="submenu" onclick="javascript:location.href='main.php';">
+        <button type="button" class="submenu">
+            <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='createNote.php';">
+            <img alt="#" src="Photos/new-note.png">
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='main.php';">
             <img alt="#" src="Photos/menu.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='new_note.php';">
-            <img alt="#" src="Photos/writing.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='acc.php';">
-            <img alt="#" src="Photos/user.png">
-        </div>
+        </button>
     </div>
-    <div class="menu_logout" onclick="javascript:location.href='logout.php';">
+    <button type="button" class="submenu" onclick="location.href='logout.php';">
         <img alt="#" src="Photos/logout.png">
-    </div>
+    </button>
 </div>
 <div class="content_wrapper">
     <div class="content" style="padding-top: 30vh">
