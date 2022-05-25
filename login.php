@@ -33,7 +33,7 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
 </head>
 <body>
 <div class="content" style="width: 25em; margin-top: 30vh">
-    <div class="block">
+    <div class="block block_login">
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
                 <input type="text" name="login" id="login" value="1">

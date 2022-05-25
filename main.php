@@ -75,7 +75,7 @@ if (!empty($where_list)) {
     <?php if ($final_search_words[0] != "") {
         while ($res_array = mysqli_fetch_array($res_query)) { ?>
             <div class="content">
-                <div class="block">
+                <div class="block block_main">
                     <div class="">
                         <h2><?php echo $res_array['id']; ?></h2>
                     </div>
@@ -93,7 +93,7 @@ if (!empty($where_list)) {
         <?php while ($note = mysqli_fetch_array($select_note)) {
             if (!($note['deleted'])) {
                 ?>
-                <div class="block">
+                <div class="block block_main">
                     <div>
                         <div class="note_head">
                             <h2><?php echo $note['title']; ?></h2>
