@@ -38,23 +38,23 @@ if (!empty($where_list)) {
 <body>
 <!-- Menu -->
 <div class="menu">
-    <div class="menu_logo">
-        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
-    </div>
+    <button type="button" class="submenu" onclick="javascript:location.href='account.php';">
+        <img alt="#" src="photos/user.png">
+    </button>
     <div>
-        <div class="submenu" onclick="javascript:location.href='main.php';">
+        <button type="button" class="menu_logo">
+            <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='createNote.php';">
+            <img alt="#" src="photos/new-note.png">
+        </button>
+        <button type="button" class="submenu" onclick="javascript:location.href='main.php';">
             <img alt="#" src="photos/menu.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='createNote.php';">
-            <img alt="#" src="photos/writing.png">
-        </div>
-        <div class="submenu" onclick="javascript:location.href='account.php';">
-            <img alt="#" src="photos/user.png">
-        </div>
+        </button>
     </div>
-    <div class="menu_logout" onclick="javascript:location.href='logout.php';">
+    <button type="button" class="menu_logout" onclick="javascript:location.href='logout.php';">
         <img alt="#" src="photos/logout.png">
-    </div>
+    </button>
 </div>
 
 <!-- Main Content -->
@@ -92,14 +92,22 @@ if (!empty($where_list)) {
         if (!($note['deleted'])){?>
         <div class="content">
             <div class="block">
-                <div class="">
+                <div class="block_c">
                     <h2><?php echo $note['title']; ?></h2>
                 </div>
-                <div class="">
+                <div class="block_c">
                     <p>Дата: <?php echo $note['created']; ?></p>
                 </div>
-                <div class="">
+                <div class="block_c">
                     <p><?php echo $note['article']; ?></p>
+                </div>
+                <div class="block_b">
+                    <button type="button" onclick="javascript:location.href='deletedNotes.php';">
+                        <img alt="#" src="photos/trash.png">
+                    </button>
+                    <button type="button" onclick="javascript:location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                        <img alt="#" src="photos/edit-note.png">
+                    </button>
                 </div>
             </div>
         </div>

@@ -18,8 +18,8 @@ if ($submit) {
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="windows-1251">
     <title>Регистрация</title>
+    <meta charset="windows-1251">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

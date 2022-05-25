@@ -7,6 +7,7 @@ body {
 button {
     border: none;
     outline: none;
+    background: none;
 }
 
 .menu {
@@ -21,7 +22,7 @@ button {
     justify-content: space-between;
 }
 
-.menu img {
+.menu img, .block img {
     margin: 1.25em;
     width: 2em;
     filter: invert(1);
@@ -32,7 +33,7 @@ button {
     height: 5em;
 }
 
-.submenu:hover, .menu_logo:hover, .menu_logout:hover {
+button img:hover {
     filter: invert(0.35);
     transition-duration: 0.3s;
 }
