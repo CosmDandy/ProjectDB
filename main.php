@@ -33,27 +33,28 @@ if (!empty($where_list)) {
 <head>
     <meta charset="windows-1251">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
     <title>Заметки</title>
 </head>
 <body>
 <!-- Menu -->
 <div class="menu">
     <button type="button" class="submenu" onclick="javascript:location.href='account.php';">
-        <img alt="#" src="photos/user.png">
+        <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" class="menu_logo">
-            <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
+        <button type="button" class="submenu">
+            <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
         </button>
         <button type="button" class="submenu" onclick="javascript:location.href='createNote.php';">
-            <img alt="#" src="photos/new-note.png">
+            <img alt="#" src="Photos/new-note.png">
         </button>
         <button type="button" class="submenu" onclick="javascript:location.href='main.php';">
-            <img alt="#" src="photos/menu.png">
+            <img alt="#" src="Photos/menu.png">
         </button>
     </div>
-    <button type="button" class="menu_logout" onclick="javascript:location.href='logout.php';">
-        <img alt="#" src="photos/logout.png">
+    <button type="button" class="submenu" onclick="location.href='logout.php';">
+        <img alt="#" src="Photos/logout.png">
     </button>
 </div>
 
@@ -66,7 +67,7 @@ if (!empty($where_list)) {
                     <input type="text" name="user_search" id="user_search">
                 </label>
                 <button type="submit">
-                    <img alt="#" src="photos/search.png">
+                    <img alt="#" src="Photos/search.png">
                 </button>
             </form>
         </div>
@@ -88,30 +89,30 @@ if (!empty($where_list)) {
             </div>
         <?php }
     } else { ?>
-    <?php while ($note = mysqli_fetch_array($select_note)) {
-        if (!($note['deleted'])){?>
-        <div class="content">
-            <div class="block">
-                <div class="block_c">
-                    <h2><?php echo $note['title']; ?></h2>
+    <div class="content">
+        <?php while ($note = mysqli_fetch_array($select_note)) {
+            if (!($note['deleted'])) {
+                ?>
+                <div class="block">
+                    <div>
+                        <div class="note_head">
+                            <h2><?php echo $note['title']; ?></h2>
+                        </div>
+                        <div class="note_text">
+                            <h3><?php echo $note['article']; ?></h3>
+                        </div>
+                    </div>
+                    <div class="block_b">
+                        <div class="note_date">
+                            <p><?php echo $note['created']; ?></p>
+                        </div>
+                        <button type="button" onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                            <img alt="#" src="Photos/edit-note.png">
+                        </button>
+                    </div>
                 </div>
-                <div class="block_c">
-                    <p>Дата: <?php echo $note['created']; ?></p>
-                </div>
-                <div class="block_c">
-                    <p><?php echo $note['article']; ?></p>
-                </div>
-                <div class="block_b">
-                    <button type="button" onclick="javascript:location.href='deletedNotes.php';">
-                        <img alt="#" src="photos/trash.png">
-                    </button>
-                    <button type="button" onclick="javascript:location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
-                        <img alt="#" src="photos/edit-note.png">
-                    </button>
-                </div>
-            </div>
-        </div>
-    <?php } } }?>
+            <?php } } }?>
+    </div>
 </div>
 </body>
 </html>

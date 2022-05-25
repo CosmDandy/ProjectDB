@@ -1,0 +1,64 @@
+/* SF Pro */
+
+@font-face {
+    font-family: "SF Black";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Black.otf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SF Pro Bold";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SF Pro Heavy";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Heavy.otf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SF Pro Light";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SF Pro Medium";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SF Pro Regular";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Regular.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SF Pro Semibold";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Semibold.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SF Pro Thin";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Thin.otf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "SF Pro Ultralight";
+    src: url("Fonts/SF Pro/SF-Pro-Text-Ultralight.otf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}

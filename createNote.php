@@ -8,21 +8,21 @@
 <body>
 <div class="menu">
     <div class="menu_logo">
-        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
+        <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
     </div>
     <div>
         <div class="submenu" onclick="javascript:location.href='main.php';">
-            <img alt="#" src="photos/menu.png">
+            <img alt="#" src="Photos/menu.png">
         </div>
         <div class="submenu" onclick="javascript:location.href='new_note.php';">
-            <img alt="#" src="photos/writing.png">
+            <img alt="#" src="Photos/writing.png">
         </div>
         <div class="submenu" onclick="javascript:location.href='acc.php';">
-            <img alt="#" src="photos/user.png">
+            <img alt="#" src="Photos/user.png">
         </div>
     </div>
     <div class="menu_logout" onclick="javascript:location.href='logout.php';">
-        <img alt="#" src="photos/logout.png">
+        <img alt="#" src="Photos/logout.png">
     </div>
 </div>
 <div class="content_wrapper">

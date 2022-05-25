@@ -25,21 +25,21 @@ $edit_note = mysqli_fetch_array ($result);
 <!-- Menu -->
 <div class="menu">
     <div class="menu_logo">
-        <img alt="#" src="photos/house.png" onclick="javascript:location.href='main.php';">
+        <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
     </div>
     <div>
         <div class="submenu" onclick="javascript:location.href='main.php';">
-            <img alt="#" src="photos/menu.png">
+            <img alt="#" src="Photos/menu.png">
         </div>
         <div class="submenu" onclick="javascript:location.href='createNote.php';">
-            <img alt="#" src="photos/new-note.png">
+            <img alt="#" src="Photos/new-note.png">
         </div>
         <div class="submenu" onclick="javascript:location.href='account.php';">
-            <img alt="#" src="photos/user.png">
+            <img alt="#" src="Photos/user.png">
         </div>
     </div>
     <div class="menu_logout" onclick="javascript:location.href='logout.php';">
-        <img alt="#" src="photos/logout.png">
+        <img alt="#" src="Photos/logout.png">
     </div>
 </div>
 
@@ -56,13 +56,13 @@ $edit_note = mysqli_fetch_array ($result);
                 <input type="hidden" name = "note" id = "note" value="<?php echo $edit_note['id']?>">
                 <div class="block_b">
                     <button type="button" onclick="javascript:location.href='main.php';">
-                        <img alt="#" src="photos/back.png">
+                        <img alt="#" src="Photos/back.png">
                     </button>
                     <button type="button" onclick="javascript:location.href='main.php';">
-                        <img alt="#" src="photos/trash.png">
+                        <img alt="#" src="Photos/trash.png">
                     </button>
                     <button type="submit" name="submit" onclick="javascript:location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
-                        <img alt="#" src="photos/check.png">
+                        <img alt="#" src="Photos/check.png">
                     </button>
                 </div>
             </form>
