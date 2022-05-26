@@ -70,7 +70,6 @@ if (!empty($where_list)) {
         </div>
     </div>
     <h1>Заметки</h1>
-
     <!-- Note boxes-->
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>
