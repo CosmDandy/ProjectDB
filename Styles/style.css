@@ -206,7 +206,7 @@ a {
 
 .note_date {
     position: absolute;
-    bottom: 0;
+    bottom: 0.2em;
     margin: 0.5em 0;
 }
 

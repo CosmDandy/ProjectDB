@@ -32,7 +32,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
     <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
-<div class="content" style="width: 22em; margin-top: 28vh">
+<div class="content" style="width: 22em; margin-top: 25vh">
     <div class="block">
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
