@@ -21,7 +21,7 @@ if ($submit) {
     <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
-<div class="content" style="width: 25em; margin-top: 30vh">
+<div class="content" style="width: 25em; margin-top: 25vh">
     <div class="block">
         <form id="register" name="register" method="POST" action="">
             <div class="block_c">

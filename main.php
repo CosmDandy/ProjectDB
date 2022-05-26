@@ -60,8 +60,8 @@ if (!empty($where_list)) {
     <div class="content">
         <div class="search">
             <form name="search" method="get" action="">
-                <label for="user_search">
-                    <input type="text" name="user_search" id="user_search" placeholder="Search">
+                <label for="search">
+                    <input type="text" name="user_search" id="search" placeholder="Search">
                 </label>
                 <button type="submit">
                     <img alt="#" src="Photos/search.png">
