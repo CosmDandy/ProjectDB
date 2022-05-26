@@ -16,6 +16,7 @@ if ($submit) {
 <head>
     <title>Регистрация</title>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <script type="text/javascript" src="Scripts/script.js"></script>

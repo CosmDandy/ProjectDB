@@ -25,6 +25,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Авторизация</title>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">

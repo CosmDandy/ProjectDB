@@ -176,8 +176,8 @@ a {
 /* Block Main Note */
 
 .note {
-    height: 9em;
-    width: 9em;
+    height: 11em;
+    width: 11em;
     min-width: 9em;
 }
 
@@ -189,9 +189,19 @@ a {
 
 /* Main */
 
+.note_head {
+
+}
+
+.note_text {
+    height: 6em;
+    margin: 0.5em 0;
+}
+
 .note_text h3 {
+    overflow-y: hidden;
     overflow-x: hidden;
-    height: 4em;
+    height: 6em;
 }
 
 .note_date {

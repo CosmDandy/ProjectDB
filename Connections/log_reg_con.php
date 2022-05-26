@@ -9,4 +9,6 @@ $select = mysqli_select_db($link, $db);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 mysqli_query($link, "SET NAMES utf8mb4;") or die(mysqli_error());
 mysqli_query($link, "SET CHARACTER SET utf8mb4;") or die(mysqli_error());
+header("Content-Type: text/html; charset=utf-8");
+mb_internal_encoding('UTF-8');
 ?>
