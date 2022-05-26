@@ -32,39 +32,40 @@ if (!empty($where_list)) {
 <html lang="ru">
 <head>
     <meta charset="windows-1251">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="font.css">
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <title>Заметки</title>
 </head>
 <body>
 <!-- Menu -->
 <div class="menu">
-    <button type="button" class="submenu" onclick="javascript:location.href='account.php';">
+    <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" class="submenu">
-            <img alt="#" src="Photos/house.png" onclick="javascript:location.href='main.php';">
+        <button type="button" title="Хуйня.пнг">
+            <img alt="#" src="Photos/house.png" onclick="location.href='main.php';">
         </button>
-        <button type="button" class="submenu" onclick="javascript:location.href='createNote.php';">
+        <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
             <img alt="#" src="Photos/new-note.png">
         </button>
-        <button type="button" class="submenu" onclick="javascript:location.href='main.php';">
+        <button type="button" title="Все заметки" onclick="location.href='main.php';">
             <img alt="#" src="Photos/menu.png">
         </button>
     </div>
-    <button type="button" class="submenu" onclick="location.href='logout.php';">
+    <button type="button" title="Выйти" onclick="location.href='logout.php';">
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
 
 <!-- Main Content -->
 <div class="content_wrapper">
+    <!-- Search-->
     <div class="content">
         <div class="search">
             <form name="search" method="get" action="">
                 <label for="user_search">
-                    <input type="search" name="user_search" id="user_search" placeholder="Search">
+                    <input type="text" name="user_search" id="user_search" placeholder="Search">
                 </label>
                 <button type="submit">
                     <img alt="#" src="Photos/search.png">
@@ -72,10 +73,12 @@ if (!empty($where_list)) {
             </form>
         </div>
     </div>
+    <!-- Note boxes-->
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
-                <div class="block block_note" style="background: #<?php echo $res_array['color']; ?>"
+                <!-- Search notes-->
+                <div class="block note" title="Редактировать заметку" style="background: #<?php echo $res_array['color']; ?>"
                      onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
                     <div>
                         <div class="note_head">
@@ -95,7 +98,8 @@ if (!empty($where_list)) {
         } else {
             while ($note = mysqli_fetch_array($select_note)) {
                 if (!($note['deleted'])) { ?>
-                    <div class="block block_note" style="background: #<?php echo $note['color']; ?>"
+                    <!-- Notes -->
+                    <div class="block note" title="Редактировать заметку" style="background: #<?php echo $note['color']; ?>"
                          onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
                         <div>
                             <div class="note_head">
@@ -109,9 +113,6 @@ if (!empty($where_list)) {
                             <div class="note_date">
                                 <p><?php echo $note['created']; ?></p>
                             </div>
-                            <!--<button type="button" onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
-                            <img alt="#" src="Photos/edit-note.png">
-                        </button>-->
                         </div>
                     </div>
                 <?php }

@@ -28,8 +28,9 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
 <html lang="ru">
 <head>
     <meta charset="windows-1251">
-    <title>Войти</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
 <div class="content" style="width: 22em; margin-top: 28vh">
@@ -37,19 +38,24 @@ if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and 
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="text" name="login" id="login" value="1" placeholder="Login">
+                <input type="text" name="login" value="Shulga_M_V@huya.tv" placeholder="Login" required>
             </div>
-            <div class="block_c" style="margin: 1.2em 0;">
+            <div class="block_c" style="position: relative">
                 <h3>Password</h3>
-                <input type="password" name="pass" id="pass" value="1" placeholder="Password">
+                <input type="password" name="pass" id="password" value="ne_nado_dada_strong_password"
+                       placeholder="Password" required>
+                <div class="pass" onclick="return show_hide_password(this);">
+                    <img alt="#" src="Photos/search.png">
+                </div>
             </div>
             <div>
-                <input type="submit" name="login_b" id="login_b" value="Войти" class="button" style="width: 100%; background-color: #2da44e;">
+                <input type="submit" name="login_b" id="login_b" value="Войти" class="button"
+                       style="width: 100%; background-color: #2da44e;">
             </div>
         </form>
     </div>
-    <div class="block">
-       <p>Нет аккаунта в заметках ?   <a href="register.php">Создать аккаунт</a></p>
+    <div class="block block_q">
+        <p>Нет аккаунта в заметках ? <a href="register.php">Создать аккаунт.</a></p>
     </div>
 </div>
 </body>
