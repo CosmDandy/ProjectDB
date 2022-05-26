@@ -20,9 +20,6 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
         break;
     }
 }
-if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and $_SESSION['login'] != '') {
-    header('Location: ' . 'main.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
