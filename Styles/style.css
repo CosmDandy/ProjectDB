@@ -43,8 +43,10 @@ h1, h2, h3, p {
     margin: 0.1em 0;
 }
 
-a {
-    text-decoration: none;
+h1 {
+    margin: 0 2em;
+    font-size: 2em;
+    font-family: 'SF Pro Bold', monospace;
 }
 
 h2 {
@@ -60,6 +62,10 @@ h3 {
 p {
     font-size: 0.75em;
     font-family: 'SF Pro Light', monospace;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Menu */
