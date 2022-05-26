@@ -17,6 +17,7 @@ if ($submit) {
     <title>Регистрация</title>
     <meta charset="windows-1251">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
@@ -36,7 +37,7 @@ if ($submit) {
                 <input type="password" name="password" id="password" value="New_user_ahueni_parol"
                        placeholder="Password" required>
                 <div class="pass" onclick="return show_hide_password(this);">
-                    <img alt="#" src="Photos/search.png">
+                    <img id="pass" alt="#" src="Photos/show.png">
                 </div>
             </div>
             <div>

@@ -105,10 +105,8 @@ if (!empty($where_list)) {
                                 <h3><?php echo $note['article']; ?></h3>
                             </div>
                         </div>
-                        <div class="block_b">
-                            <div class="note_date">
-                                <p><?php echo $note['created']; ?></p>
-                            </div>
+                        <div class="note_date">
+                            <p><?php echo $note['created']; ?></p>
                         </div>
                     </div>
                 <?php }

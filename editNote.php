@@ -44,7 +44,7 @@ $edit_note = mysqli_fetch_array($result);
 <!-- Main Content -->
 <div class="content_wrapper">
     <div class="content" style="margin-top: 20vh;">
-        <div class="block">
+        <div class="block" style="background: #<?php echo $edit_note['color']; ?>;">
             <form name="edit_note" autocomplete="on" method="post" action="">
                 <div class="block_c">
                     <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">

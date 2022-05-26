@@ -27,6 +27,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
     <meta charset="windows-1251">
     <title>Авторизация</title>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
@@ -42,7 +43,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
                 <input type="password" name="pass" id="password" value="ne_nado_dada_strong_password"
                        placeholder="Password" required>
                 <div class="pass" onclick="return show_hide_password(this);">
-                    <img alt="#" src="Photos/search.png">
+                    <img id="pass" alt="#" src="Photos/show.png">
                 </div>
             </div>
             <div>
