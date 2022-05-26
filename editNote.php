@@ -20,7 +20,7 @@ $edit_note = mysqli_fetch_array($result);
     <meta charset="windows-1251">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <title><?php echo $edit_note['title'];?></title>
+    <title><?php echo $edit_note['title']; ?></title>
 </head>
 <body>
 
@@ -44,7 +44,7 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
+document.getElementsByName("write")[0].onclick = function(){window.location.href='report.php'}
 <!-- Main Content -->
 <div class="content_wrapper">
     <div class="content" style="margin-top: 20vh;">
@@ -59,14 +59,13 @@ $edit_note = mysqli_fetch_array($result);
                 </div>
                 <input type="hidden" name="note" id="note" value="<?php echo $edit_note['id'] ?>">
                 <div class="block_b">
-                    <button type="button" onclick="javascript:location.href='main.php';">
+                    <button type="button" title="К заметкам" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
-                    <button type="button" onclick="javascript:location.href='main.php';">
+                    <button type="button" title="Удалить заметку" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/trash.png">
                     </button>
-                    <button type="submit" name="submit"
-                            onclick="javascript:location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                    <button type="submit" title="Сохранить изменения" name="submit" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/check.png">
                     </button>
                 </div>

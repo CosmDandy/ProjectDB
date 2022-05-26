@@ -48,11 +48,11 @@ if (!$_SESSION['auth']) {
                     <textarea style="height: 10em; margin: 1.2em 0;" name="article" id="article"></textarea>
                 </div>
                 <div class="block_b">
-                    <button type="button" onclick="javascript:location.href='main.php';">
+                    <button type="button" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
                     <button type="submit" name="submit"
-                            onclick="javascript:location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                            onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
                         <img alt="#" src="Photos/check.png">
                     </button>
                 </div>
