@@ -27,7 +27,7 @@ if (!empty($where_list)) {
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="windows-1251">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <title>Заметки</title>
@@ -75,7 +75,8 @@ if (!empty($where_list)) {
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
                 <!-- Search notes-->
-                <div class="block note" title="Редактировать заметку" style="background: #<?php echo $res_array['color']; ?>"
+                <div class="block note" title="Редактировать заметку"
+                     style="background: #<?php echo $res_array['color']; ?>"
                      onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
                     <div>
                         <div class="note_head">
@@ -96,7 +97,8 @@ if (!empty($where_list)) {
             while ($note = mysqli_fetch_array($select_note)) {
                 if (!($note['deleted'])) { ?>
                     <!-- Notes -->
-                    <div class="block note" title="Редактировать заметку" style="background: #<?php echo $note['color']; ?>"
+                    <div class="block note" title="Редактировать заметку"
+                         style="background: #<?php echo $note['color']; ?>"
                          onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
                         <div>
                             <div class="note_head">

@@ -13,7 +13,7 @@ $edit_note = mysqli_fetch_array($result);
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="windows-1251">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <title><?php echo $edit_note['title']; ?></title>

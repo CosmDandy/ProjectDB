@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/localhost.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connections/log_reg_con.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connections/log_reg_con.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connections/project_con.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connections/project_con.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,6 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/roni/Documents/ProjectDB/Connections",
     "nodejs_package_manager_path": "npm",
@@ -56,8 +61,8 @@
       <recent name="$PROJECT_DIR$/Connections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/Git" />
       <recent name="$PROJECT_DIR$/Styles" />
     </key>
@@ -76,7 +81,7 @@
       <workItem from="1653560356791" duration="3918000" />
       <workItem from="1653564289938" duration="1295000" />
       <workItem from="1653565590211" duration="645000" />
-      <workItem from="1653567346574" duration="1879000" />
+      <workItem from="1653567346574" duration="4371000" />
     </task>
     <servers />
   </component>

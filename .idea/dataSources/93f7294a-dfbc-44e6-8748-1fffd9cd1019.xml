@@ -891,7 +891,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="227" parent="1" name="project">
-      <CollationName>cp1251_general_ci</CollationName>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="228" parent="1" name="sys">
       <CollationName>utf8_general_ci</CollationName>
@@ -919,11 +919,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </user>
     <table id="236" parent="227" name="notes">
       <Engine>InnoDB</Engine>
-      <CollationName>cp1251_general_ci</CollationName>
+      <CollationName>utf8_general_ci</CollationName>
     </table>
     <table id="237" parent="227" name="users">
       <Engine>InnoDB</Engine>
-      <CollationName>cp1251_general_ci</CollationName>
+      <CollationName>utf8_general_ci</CollationName>
     </table>
     <column id="238" parent="236" name="id">
       <DataType>int(11)|0s</DataType>

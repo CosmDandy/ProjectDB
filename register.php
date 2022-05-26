@@ -15,7 +15,7 @@ if ($submit) {
 <html lang="ru">
 <head>
     <title>Регистрация</title>
-    <meta charset="windows-1251">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
     <script type="text/javascript" src="Scripts/script.js"></script>
