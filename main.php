@@ -1,10 +1,6 @@
 <?php
 require_once("Connections/project_con.php");
 
-if (!$_SESSION['auth']) {
-    header('Location: ' . 'login.php');
-}
-
 $user = $_SESSION['user_id'][0];
 $select_note = mysqli_query($link, "SELECT * FROM notes WHERE user_id = '$user' ORDER BY created DESC ");
 $user_search = str_replace(',', ' ', $_GET['user_search']);

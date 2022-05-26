@@ -1,10 +1,6 @@
 <?php
 require_once("Connections/project_con.php");
 
-if (!$_SESSION['auth']) {
-    header('Location: ' . 'login.php');
-}
-
 $note_id = $_GET['note'];
 $title = $_POST['title'];
 $article = $_POST['article'];
@@ -44,7 +40,7 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-document.getElementsByName("write")[0].onclick = function(){window.location.href='report.php'}
+
 <!-- Main Content -->
 <div class="content_wrapper">
     <div class="content" style="margin-top: 20vh;">

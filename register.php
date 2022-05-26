@@ -1,5 +1,5 @@
 <?php
-require_once("Connections/project_con.php");
+require_once("Connections/log_reg_con.php");
 
 $_SESSION["submit"] = $submit = $_POST["submit"];
 $_SESSION['login'] = $login = $_POST["login"];
@@ -31,11 +31,13 @@ if ($submit) {
                 <h3>Email address</h3>
                 <input type="email" name="login" value="New_user@huya.tv" placeholder="Login" required>
             </div>
-            <div class="block_c">
+            <div class="block_c" style="position: relative">
                 <h3>Password</h3>
                 <input type="password" name="password" id="password" value="New_user_ahueni_parol"
                        placeholder="Password" required>
-                <a href="#" onclick="return show_hide_password(this);">wdefrgh</a>
+                <div class="pass" onclick="return show_hide_password(this);">
+                    <img alt="#" src="Photos/search.png">
+                </div>
             </div>
             <div>
                 <input type="hidden" value="u" name="rights" id="rights">

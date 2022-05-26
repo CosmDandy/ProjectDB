@@ -1,10 +1,6 @@
 <?php
 require_once("Connections/project_con.php");
 
-if (!$_SESSION['auth']) {
-    header('Location: ' . 'login.php');
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">

@@ -1,5 +1,5 @@
 <?php
-require_once("Connections/project_con.php");
+require_once("Connections/log_reg_con.php");
 
 $login = $_POST['login'];
 $pass = $_POST['pass'];
