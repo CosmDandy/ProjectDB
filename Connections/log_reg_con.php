@@ -9,7 +9,4 @@ $select = mysqli_select_db($link, $db);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 mysqli_query($link, "SET NAMES cp1251;") or die(mysqli_error());
 mysqli_query($link, "SET CHARACTER SET cp1251;") or die(mysqli_error());
-if (!$_SESSION['auth']) {
-    header('Location: ' . 'login.php');
-}
 ?>

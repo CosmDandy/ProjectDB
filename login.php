@@ -1,5 +1,5 @@
 <?php
-require_once("Connections/project_con.php");
+require_once("Connections/log_reg_con.php");
 
 $login = $_POST['login'];
 $pass = $_POST['pass'];
@@ -20,32 +20,40 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
         break;
     }
 }
-if (!$_SESSION['auth'] and !$_SESSION['status'] and $_SESSION['pass'] != '' and $_SESSION['login'] != '') {
-    header('Location: ' . 'main.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="windows-1251">
-    <title>Войти</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
+    <script type="text/javascript" src="Scripts/script.js"></script>
 </head>
 <body>
-<div class="content" style="width: 25em; margin-top: 30vh">
+<div class="content" style="width: 22em; margin-top: 28vh">
     <div class="block">
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
-                <input type="text" name="login" id="login" value="1">
+                <h3>Email address</h3>
+                <input type="text" name="login" value="Shulga_M_V@huya.tv" placeholder="Login" required>
             </div>
-            <div class="block_c" style="margin: 1.2em 0;">
-                <input type="password" name="pass" id="pass" value="1">
+            <div class="block_c" style="position: relative">
+                <h3>Password</h3>
+                <input type="password" name="pass" id="password" value="ne_nado_dada_strong_password"
+                       placeholder="Password" required>
+                <div class="pass" onclick="return show_hide_password(this);">
+                    <img id="pass" alt="#" src="Photos/show.png">
+                </div>
             </div>
-            <div class="block_b">
-                <a href="register.php" class="button">Зарегистрироваться</a>
-                <input type="submit" name="login_b" id="login_b" value="Войти" class="button">
+            <div>
+                <input type="submit" name="login_b" id="login_b" value="Войти" class="button"
+                       style="width: 100%; background-color: #2da44e;">
             </div>
         </form>
+    </div>
+    <div class="block block_q">
+        <p>Нет аккаунта в заметках ? <a href="register.php">Создать аккаунт.</a></p>
     </div>
 </div>
 </body>

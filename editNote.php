@@ -1,11 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once("Connections/project_con.php");
+
+$note_id = $_GET['note'];
+$title = $_POST['title'];
+$article = $_POST['article'];
+if (($title) && ($article)) {
+    $update_query = mysqli_query($link, "UPDATE notes SET title = '$title', article = '$article' WHERE id = $note_id");
+}
+$result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
+$edit_note = mysqli_fetch_array($result);
+?>
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Заметка</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
+    <title><?php echo $edit_note['title']; ?></title>
 </head>
 <body>
 
+<!-- Menu -->
+<div class="menu">
+    <button type="button" title="Аккаунт" onclick="location.href='account.php';">
+        <img alt="#" src="Photos/user.png">
+    </button>
+    <div>
+        <button type="button" title="Хуйня.пнг">
+            <img alt="#" src="Photos/house.png" onclick="location.href='main.php';">
+        </button>
+        <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
+            <img alt="#" src="Photos/new-note.png">
+        </button>
+        <button type="button" title="Все заметки" onclick="location.href='main.php';">
+            <img alt="#" src="Photos/menu.png">
+        </button>
+    </div>
+    <button type="button" title="Выйти" onclick="location.href='logout.php';">
+        <img alt="#" src="Photos/logout.png">
+    </button>
+</div>
+
+<!-- Main Content -->
+<div class="content_wrapper">
+    <div class="content" style="margin-top: 20vh;">
+        <div class="block" style="background: #<?php echo $edit_note['color']; ?>;">
+            <form name="edit_note" autocomplete="on" method="post" action="">
+                <div class="block_c">
+                    <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">
+                </div>
+                <div class="block_c">
+                    <textarea name="article" id=" article"
+                              style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
+                </div>
+                <input type="hidden" name="note" id="note" value="<?php echo $edit_note['id'] ?>">
+                <div class="block_b">
+                    <button type="button" title="К заметкам" onclick="location.href='main.php';">
+                        <img alt="#" src="Photos/back.png">
+                    </button>
+                    <button type="button" title="Удалить заметку" onclick="location.href='main.php';">
+                        <img alt="#" src="Photos/trash.png">
+                    </button>
+                    <button type="submit" title="Сохранить изменения" name="submit" onclick="location.href='main.php';">
+                        <img alt="#" src="Photos/check.png">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
