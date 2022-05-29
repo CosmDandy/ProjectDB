@@ -44,7 +44,9 @@ h1, h2, h3, p {
 }
 
 h1 {
-    margin: 0 2em;
+    width: 60em;
+    min-width: 9em;
+    margin: 0 1em;
     font-size: 2em;
     font-family: 'SF Pro Bold', monospace;
 }
@@ -71,7 +73,6 @@ a {
 /* Menu */
 
 .menu {
-    float: left;
     position: fixed;
     width: 4.5em;
     height: calc(100vh - 2em);
@@ -79,12 +80,23 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 0.15em solid rgba(115, 115, 115, 0.5);
+}
+
+.menu_left {
+    float: left;
+    left: 0;
+    border-right: 0.15em solid rgba(115, 115, 115, 0.3);
+}
+
+.menu_right {
+    float: right;
+    right: 0;
+    border-left: 0.15em solid rgba(115, 115, 115, 0.3);
 }
 
 .menu img {
     margin-top: 0.1em;
-    width: 2em;
+    width: 2.2em;
 }
 
 .menu button {
@@ -94,9 +106,9 @@ a {
 /* Content Wrapper */
 
 .content_wrapper {
-    float: right;
-    width: calc(100% - 14.5em);
-    margin: 0 5em;
+    position: absolute;
+    width: calc(100% - 20em);
+    margin: 0 10em;
 }
 
 /* Content */
@@ -188,11 +200,6 @@ a {
 }
 
 /* Main */
-
-.note_head {
-
-}
-
 .note_text {
     height: 6em;
     margin: 0.5em 0;

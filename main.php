@@ -34,20 +34,21 @@ if (!empty($where_list)) {
     <title>Заметки</title>
 </head>
 <body>
+
 <!-- Menu -->
-<div class="menu">
+<div class="menu menu_left">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" title="Хуйня.пнг">
-            <img alt="#" src="Photos/house.png" onclick="location.href='main.php';">
+        <button type="button" title="Все заметки" onclick="location.href='main.php';">
+            <img alt="#" src="Photos/menu.png">
         </button>
         <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
             <img alt="#" src="Photos/new-note.png">
         </button>
-        <button type="button" title="Все заметки" onclick="location.href='main.php';">
-            <img alt="#" src="Photos/menu.png">
+        <button type="button" title="Корзина">
+            <img alt="#" src="Photos/trash.png" onclick="location.href='deletedNotes.php';">
         </button>
     </div>
     <button type="button" title="Выйти" onclick="location.href='logout.php';">
@@ -70,14 +71,16 @@ if (!empty($where_list)) {
             </form>
         </div>
     </div>
-    <h1>Заметки</h1>
     <!-- Note boxes-->
+    <div class="content">
+        <h1>Заметки</h1>
+    </div>
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
                 <!-- Search notes-->
                 <div class="block note" title="Редактировать заметку"
-                     style="background: #<?php echo $res_array['color']; ?>"
+                     style="background: <?php echo $res_array['color']; ?>"
                      onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
                     <div>
                         <div class="note_head">
@@ -87,10 +90,8 @@ if (!empty($where_list)) {
                             <h3><?php echo $res_array['article']; ?></h3>
                         </div>
                     </div>
-                    <div class="block_b">
-                        <div class="note_date">
-                            <p><?php echo $res_array['created']; ?></p>
-                        </div>
+                    <div class="note_date">
+                        <p><?php echo $res_array['created']; ?></p>
                     </div>
                 </div>
             <?php }
@@ -99,7 +100,7 @@ if (!empty($where_list)) {
                 if (!($note['deleted'])) { ?>
                     <!-- Notes -->
                     <div class="block note" title="Редактировать заметку"
-                         style="background: #<?php echo $note['color']; ?>"
+                         style="background: <?php echo $note['color']; ?>"
                          onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
                         <div>
                             <div class="note_head">
@@ -117,6 +118,14 @@ if (!empty($where_list)) {
             }
         } ?>
     </div>
+</div>
+<div class="menu menu_right">
+    <button type="button" title="Сменить цветовую тему">
+        <img alt="#" src="Photos/contrast.png">
+    </button>
+    <button type="button" title="Помощь">
+        <img alt="#" src="Photos/question.png">
+    </button>
 </div>
 </body>
 </html>

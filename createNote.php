@@ -7,37 +7,38 @@ require_once("Connections/project_con.php");
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Новая заметка</title>
+    <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
+    <title>Новая заметка</title>
 </head>
 <body>
-<!-- Menu -->
-<div class="menu">
+<!-- Menu Left -->
+<div class="menu menu_left">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" title="Хуйня.пнг">
-            <img alt="#" src="Photos/house.png" onclick="location.href='main.php';">
+        <button type="button" title="Все заметки" onclick="location.href='main.php';">
+            <img alt="#" src="Photos/menu.png">
         </button>
         <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
             <img alt="#" src="Photos/new-note.png">
         </button>
-        <button type="button" title="Все заметки" onclick="location.href='main.php';">
-            <img alt="#" src="Photos/menu.png">
+        <button type="button" title="Корзина">
+            <img alt="#" src="Photos/trash.png" onclick="location.href='deletedNotes.php';">
         </button>
     </div>
     <button type="button" title="Выйти" onclick="location.href='logout.php';">
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
 <!-- Main Content -->
 <div class="content_wrapper">
     <div class="content" style="padding-top: 25vh">
-        <div class="block">
+        <div class="block" id="block">
             <form name="new_note" autocomplete="on" method="post" action="">
+                <input type="hidden" name="color" id="color" value="#F6F8FA">
                 <div class="block_c">
                     <input type="text" name="title" id="title" value="title">
                 </div>
@@ -48,14 +49,42 @@ require_once("Connections/project_con.php");
                     <button type="button" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
-                    <button type="submit" name="submit"
-                            onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                    <button type="submit" name="submit">
                         <img alt="#" src="Photos/check.png">
                     </button>
                 </div>
             </form>
         </div>
     </div>
+</div>
+<!-- Right Menu -->
+<div class="menu menu_right">
+    <button type="button" title="Сменить цветовую тему">
+        <img alt="#" src="Photos/contrast.png">
+    </button>
+    <div>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(3)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(4)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(5)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(6)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+    </div>
+    <button type="button" title="Помощь">
+        <img alt="#" src="Photos/question.png">
+    </button>
 </div>
 </body>
 </html>
