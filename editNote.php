@@ -78,7 +78,7 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/contrast.png">
     </button>
     <div>
-        <button type="button" title="Цвет"  onclick="Change_bg_Color(1)">
+        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
             <img alt="#" src="Photos/add.png">
         </button>
         <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
