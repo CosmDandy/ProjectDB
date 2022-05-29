@@ -14,12 +14,12 @@ if ($submit) {
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Регистрация</title>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <script type="text/javascript" src="Scripts/script.js"></script>
+    <title>Регистрация</title>
 </head>
 <body>
 <div class="content" style="width: 25em; margin-top: 20vh">

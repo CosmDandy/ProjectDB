@@ -4,7 +4,6 @@
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1653565590211" duration="645000" />
       <workItem from="1653567346574" duration="4371000" />
       <workItem from="1653742631824" duration="92000" />
-      <workItem from="1653849998403" duration="12840000" />
+      <workItem from="1653849998403" duration="13903000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>

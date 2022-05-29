@@ -4,6 +4,10 @@ body {
     background-color: #ffffff;
 }
 
+:hover {
+    transition-duration: 0.3s;
+}
+
 /* Button */
 
 button {
@@ -17,7 +21,6 @@ button {
 button:hover {
     border-radius: 50%;
     background-color: rgb(34 34 34);
-    transition-duration: 0.3s;
 }
 
 button:hover img {
@@ -38,8 +41,9 @@ input, textarea {
 
 /* Fonts */
 
-h1, h2, h3, p {
+h1, h2, h3, h4, h4, h6, p, a {
     margin: 0.1em 0;
+    text-decoration: none;
 }
 
 h1 {
@@ -63,10 +67,6 @@ h3 {
 p {
     font-size: 0.75em;
     font-family: 'SF Pro Light', monospace;
-}
-
-a {
-    text-decoration: none;
 }
 
 /* Menu */
@@ -127,9 +127,6 @@ a {
     width: 100%;
     min-width: 9em;
     margin: 0 2em;
-    padding: 10px;
-    border: 1px solid #686868;
-    border-radius: 0.7em;
 }
 
 .search form {
@@ -194,11 +191,11 @@ a {
 
 .note:hover {
     box-shadow: 0 1em 2em rgba(0,0,0,0.25), 0 1em 1em rgba(0,0,0,0.22);
-    transition-duration: 0.3s;
     cursor: pointer;
 }
 
 /* Main */
+
 .note_text {
     height: 6em;
     margin: 0.5em 0;
@@ -215,6 +212,8 @@ a {
     bottom: 0.2em;
     margin: 0.5em 0;
 }
+
+/* Login Logout Register */
 
 .pass {
     position: absolute;
