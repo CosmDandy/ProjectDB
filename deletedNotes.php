@@ -84,7 +84,7 @@ if (!empty($where_list)) {
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query))
-                if ($note['deleted']){ ?>
+                if ($res_array['deleted']){ ?>
                     <!-- Search notes-->
                     <div class="block note" title="Редактировать заметку"
                          style="background: <?php echo $res_array['color']; ?>"

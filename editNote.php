@@ -10,7 +10,6 @@ if (($title) && ($article) && ($color)) {
 }
 $result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
 $edit_note = mysqli_fetch_array($result);
-$update = "UPDATE notes SET deleted = 1 WHERE id = $note_id"
 ?>
 <!doctype html>
 <html lang="ru">
@@ -62,8 +61,7 @@ $update = "UPDATE notes SET deleted = 1 WHERE id = $note_id"
                     <button type="button" title="К заметкам" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
-                    <button type="button" title="Удалить заметку"
-                            onclick="location.href='main.php'; <?php mysqli_query($link, $update); ?>">
+                    <button type="button" title="Удалить заметку">
                         <img alt="#" src="Photos/trash.png">
                     </button>
                     <button type="submit" title="Сохранить изменения" name="submit">

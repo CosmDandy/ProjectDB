@@ -31,11 +31,11 @@ if ($submit) {
             </div>
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="email" name="login" value="New_user@huya.tv" placeholder="Login" required>
+                <input type="email" name="login" value="New_user@mail.ru" placeholder="Login" required>
             </div>
             <div class="block_c" style="position: relative">
                 <h3>Password</h3>
-                <input type="password" name="password" id="password" value="New_user_ahueni_parol"
+                <input type="password" name="password" id="password" value="New_user_password"
                        placeholder="Password" required>
                 <div class="pass" onclick="return show_hide_password(this);">
                     <img id="pass" alt="#" src="Photos/show.png">
