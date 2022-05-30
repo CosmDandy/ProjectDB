@@ -1,7 +1,14 @@
 <?php
 require_once("Connections/project_con.php");
 
-?>
+$id = $_SESSION['user_id'];
+$title = $_POST['title'];
+$article = $_POST['article'];
+$color = $_POST['color'];
+$created = $_POST['created'];
+if (($title) && ($article)) {
+    $query = mysqli_query($link, "INSERT INTO notes (id, title, article, created, deleted, user_id, color) VALUES (1, '$title', '$article', '$created', 0, '$id', '$color')");
+}?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -39,6 +46,7 @@ require_once("Connections/project_con.php");
         <div class="block" id="block">
             <form name="new_note" autocomplete="on" method="post" action="">
                 <input type="hidden" name="color" id="color" value="#F6F8FA">
+                <input type="hidden" name="created" id="created" value="<?php echo date('Y-m-d'); ?>">
                 <div class="block_c">
                     <input type="text" name="title" id="title" value="title">
                 </div>
