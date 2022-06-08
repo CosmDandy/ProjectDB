@@ -2,7 +2,11 @@
 require_once("Connections/project_con.php");
 
 $user = $_SESSION['user_id'][0];
-$select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
+
+
+
+
+
 
 ?>
 
@@ -15,7 +19,7 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <title>Каталоги</title>
+    <title>Удалено!</title>
 </head>
 <body>
 
@@ -42,44 +46,9 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
 
 <!-- Main Content -->
 <div class="content_wrapper">
-    <!-- Search-->
-    <div class="content">
-        <div class="search">
-            <form name="search" method="get" action="">
-                <label for="search">
-                    <input type="text" name="user_search" id="search" placeholder="Поиск">
-                </label>
-                <button type="submit">
-                    <img alt="#" src="Photos/search.png">
-                </button>
-            </form>
-        </div>
-    </div>
-    <!-- Note boxes-->
-    <div class="content">
-        <h1>Каталоги</h1>
-    </div>
-    <div class="content">
-                <!-- Search notes-->
-        <?php
-            while ($folder = mysqli_fetch_array($select_folder)) 
-            {
-        ?>
-                <!-- Notes -->
-                    <div class="block note" title="Заметки"
-                         style="background: <?php echo $folder['color']; ?>"
-                         onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
-                        <div>
-                            <div class="note_head">
-                                <h2><?php echo $folder['title']; ?></h2>
-                            </div>
-                        </div>
-                    </div>
-                <?php 
-            }
-        ?>
-    </div>
+    
 </div>
+    
 <div class="menu menu_right">
     <button type="button" title="Сменить цветовую тему">
         <img alt="#" src="Photos/contrast.png">
@@ -88,5 +57,25 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
         <img alt="#" src="Photos/question.png">
     </button>
 </div>
+    
+    <?php
+    if(isset($_POST["deleteFolder"]))
+    {
+        $folder = $_POST["folder"];
+        $delete_folder = mysqli_query($link, "DELETE FROM folders WHERE id = '$folder'");
+        $delete_notes = mysqli_query($link, "DELETE FROM notes WHERE folder_id = '$folder'");
+        echo "Каталог удален. Вы будете перенаправлены на главную страницу через 5 секунд.";
+    }
+    ?>
+    
+    <script>
+        setTimeout(function () 
+            {
+                window.location.href= 'main.php'; // the redirect goes here
+            },5000);
+    </script>
+    
+    
+    
 </body>
 </html>

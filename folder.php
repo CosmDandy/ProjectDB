@@ -1,11 +1,9 @@
 <?php
 require_once("Connections/project_con.php");
-
 $user = $_SESSION['user_id'][0];
-if (isset($_POST['submit'])){
-    mysqli_query($link, "DELETE FROM notes WHERE user_id='$user' and deleted=1");
-}
-$select_note = mysqli_query($link, "SELECT * FROM notes WHERE user_id = '$user' ORDER BY created DESC ");
+$folder = $_GET['folder'];
+$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id = '$folder' ORDER BY created DESC ");
+
 $user_search = str_replace(',', ' ', $_GET['user_search']);
 $search_words = explode(' ', $user_search);
 
@@ -27,6 +25,10 @@ if (!empty($where_list)) {
     $res_query = mysqli_query($link, $where_list);
 }
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -34,7 +36,7 @@ if (!empty($where_list)) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <title>Заметки</title>
+    <title>Каталоги</title>
 </head>
 <body>
 
@@ -66,7 +68,7 @@ if (!empty($where_list)) {
         <div class="search">
             <form name="search" method="get" action="">
                 <label for="search">
-                    <input type="text" name="user_search" id="search" placeholder="Search">
+                    <input type="text" name="user_search" id="search" placeholder="Поиск">
                 </label>
                 <button type="submit">
                     <img alt="#" src="Photos/search.png">
@@ -74,37 +76,34 @@ if (!empty($where_list)) {
             </form>
         </div>
     </div>
-    <form action='' method="post">
-        <input type='submit' value="Удалить все" name='submit' id='submit'>
-    </form>
     <!-- Note boxes-->
     <div class="content">
         <h1>Заметки</h1>
+        <h1><a href="createNote.php?folder=<?php echo $folder?>">Создать заметку</a></h1>
     </div>
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>
-            <?php while ($res_array = mysqli_fetch_array($res_query))
-                if ($res_array['deleted']){ ?>
-                    <!-- Search notes-->
-                    <div class="block note" title="Редактировать заметку"
-                         style="background: <?php echo $res_array['color']; ?>"
-                         onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
-                        <div>
-                            <div class="note_head">
-                                <h2><?php echo $res_array['title']; ?></h2>
-                            </div>
-                            <div class="note_text">
-                                <h3><?php echo $res_array['article']; ?></h3>
-                            </div>
+            <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
+                <!-- Search notes-->
+                <div class="block note" title="Редактировать заметку"
+                     style="background: <?php echo $res_array['color']; ?>"
+                     onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
+                    <div>
+                        <div class="note_head">
+                            <h2><?php echo $res_array['title']; ?></h2>
                         </div>
-                        <div class="note_date">
-                            <p><?php echo $res_array['created']; ?></p>
+                        <div class="note_text">
+                            <h3><?php echo $res_array['article']; ?></h3>
                         </div>
                     </div>
-                <?php }
+                    <div class="note_date">
+                        <p><?php echo $res_array['created']; ?></p>
+                    </div>
+                </div>
+            <?php }
         } else {
             while ($note = mysqli_fetch_array($select_note)) {
-                if ($note['deleted']) { ?>
+                if (!($note['deleted'])) { ?>
                     <!-- Notes -->
                     <div class="block note" title="Редактировать заметку"
                          style="background: <?php echo $note['color']; ?>"
@@ -136,3 +135,4 @@ if (!empty($where_list)) {
 </div>
 </body>
 </html>
+

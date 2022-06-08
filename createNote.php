@@ -2,12 +2,19 @@
 require_once("Connections/project_con.php");
 
 $id = $_SESSION['user_id'];
+$folder = $_GET['folder'];
+
+$color_query = mysqli_query($link, "SELECT color FROM folders WHERE id = '$folder'");
+$color_array = mysqli_fetch_array($color_query);
+$color = $color_array['color'];
+echo $color;
+
 $title = $_POST['title'];
 $article = $_POST['article'];
-$color = $_POST['color'];
 $created = $_POST['created'];
-if (($title) && ($article)) {
-    $query = mysqli_query($link, "INSERT INTO notes (id, title, article, created, deleted, user_id, color) VALUES (1, '$title', '$article', '$created', 0, '$id', '$color')");
+if (($title) && ($article)) 
+{
+    $query = mysqli_query($link, "INSERT INTO notes (title, article, created, deleted, folder_id, color) VALUES ('$title', '$article', '$created', 0, '$folder', '$color')");
 }?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -26,10 +33,10 @@ if (($title) && ($article)) {
         <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" title="Все заметки" onclick="location.href='main.php';">
+        <button type="button" title="Главная" onclick="location.href='main.php';">
             <img alt="#" src="Photos/menu.png">
         </button>
-        <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
+        <button type="button" title="Новый каталог" onclick="location.href='createFolder.php';">
             <img alt="#" src="Photos/new-note.png">
         </button>
         <button type="button" title="Корзина">
@@ -45,7 +52,6 @@ if (($title) && ($article)) {
     <div class="content" style="padding-top: 25vh">
         <div class="block" id="block">
             <form name="new_note" autocomplete="on" method="post" action="">
-                <input type="hidden" name="color" id="color" value="#F6F8FA">
                 <input type="hidden" name="created" id="created" value="<?php echo date('Y-m-d'); ?>">
                 <div class="block_c">
                     <input type="text" name="title" id="title" value="title">

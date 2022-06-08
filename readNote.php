@@ -5,9 +5,6 @@ $note_id = $_GET['note'];
 $title = $_POST['title'];
 $article = $_POST['article'];
 $color = $_POST['color'];
-if (($title) && ($article) && ($color)) {
-    $update_query = mysqli_query($link, "UPDATE notes SET title = '$title', article = '$article', color = '$color' WHERE id = $note_id");
-}
 $result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
 $edit_note = mysqli_fetch_array($result);
 ?>
@@ -28,10 +25,10 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/user.png">
     </button>
     <div>
-        <button type="button" title="Главная" onclick="location.href='main.php';">
+        <button type="button" title="Все заметки" onclick="location.href='main.php';">
             <img alt="#" src="Photos/menu.png">
         </button>
-        <button type="button" title="Новый каталог" onclick="location.href='createFolder.php';">
+        <button type="button" title="Новая заметка" onclick="location.href='createNote.php';">
             <img alt="#" src="Photos/new-note.png">
         </button>
         <button type="button" title="Корзина">
@@ -47,13 +44,13 @@ $edit_note = mysqli_fetch_array($result);
 <div class="content_wrapper">
     <div class="content" style="margin-top: 20vh;">
         <div class="block" id="block" style="background: <?php echo $edit_note['color']; ?>;">
-            <form name="edit_note" autocomplete="on" method="post" action="">
+            <form method="post" action="">
                 <input type="hidden" name="color" id="color" value="<?php echo $edit_note['color']; ?>">
                 <div class="block_c">
-                    <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">
+                   <h2 align="center"><?php echo $edit_note['title']; ?></h2>
                 </div>
                 <div class="block_c">
-                    <textarea name="article" id="article" style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
+                        <h2><?php echo $edit_note['article']; ?></h2>
                 </div>
                 <div class="block_b">
                     <button type="button" title="К заметкам" onclick="location.href='main.php';">
@@ -62,8 +59,8 @@ $edit_note = mysqli_fetch_array($result);
                     <button type="button" title="Удалить заметку">
                         <img alt="#" src="Photos/trash.png">
                     </button>
-                    <button type="submit" title="Сохранить изменения" name="submit">
-                        <img alt="#" src="Photos/check.png">
+                    <button type="button" title="Редактировать заметку" onclick="location.href='editNote.php?note=<?php echo $edit_note["id"];?>;'">
+                        <img alt="#" src="Photos/edit-note.png">
                     </button>
                 </div>
             </form>
@@ -75,26 +72,6 @@ $edit_note = mysqli_fetch_array($result);
     <button type="button" title="Сменить цветовую тему">
         <img alt="#" src="Photos/contrast.png">
     </button>
-    <div>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(3)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(4)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(5)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(6)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-    </div>
     <button type="button" title="Помощь">
         <img alt="#" src="Photos/question.png">
     </button>

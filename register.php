@@ -50,7 +50,7 @@ if ($submit) {
         </form>
     </div>
     <div class="block block_q">
-        <p>Уже есть аккаунт в заметках ? <a href="login.php">Войти.</a></p>
+        <p>Уже есть аккаунт в заметках? <a href="login.php">Войти</a></p>
     </div>
 </div>
 </body>

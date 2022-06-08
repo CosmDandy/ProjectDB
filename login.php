@@ -29,6 +29,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
     <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
+    <link rel="stylesheet" type="text/css" href="Styles/log_style.css">
     <title>Авторизация</title>
 </head>
 <body>
@@ -37,11 +38,11 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="text" name="login" value="user@mail.ru" placeholder="Login" required>
+                <input type="text" name="login" value="Shulga_M_V@huya.tv" placeholder="Login" required>
             </div>
             <div class="block_c" style="position: relative">
                 <h3>Password</h3>
-                <input type="password" name="pass" id="password" value="user_password"
+                <input type="password" name="pass" id="password" value="ne_nado_dada_strong_password"
                        placeholder="Password" required>
                 <div class="pass" onclick="return show_hide_password(this);">
                     <img id="pass" alt="#" src="Photos/show.png">
@@ -54,7 +55,7 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
         </form>
     </div>
     <div class="block block_q">
-        <p>Нет аккаунта в заметках ? <a href="register.php">Создать аккаунт.</a></p>
+        <p>Нет аккаунта в заметках? <a href="register.php">Создать аккаунт</a></p>
     </div>
 </div>
 </body>

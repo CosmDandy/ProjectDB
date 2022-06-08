@@ -1,135 +1,102 @@
-
-
 -- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- version 3.5.1
+-- http://www.phpmyadmin.net
 --
--- Хост: localhost:8889
--- Время создания: Май 26 2022 г., 13:08
--- Версия сервера: 5.7.34
--- Версия PHP: 7.4.21
-drop schema if exists project;
-CREATE DATABASE project;
-USE project;
+-- Host: 127.0.0.1
+-- Generation Time: Jun 06, 2022 at 08:25 PM
+-- Server version: 5.5.29
+-- PHP Version: 5.3.13
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT = @@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS = @@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION = @@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `project`
+-- Database: `project`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `notes`
+-- Table structure for table `folders`
 --
 
-CREATE TABLE `notes`
-(
-    `id`      int(11)    NOT NULL,
-    `title`   varchar(30)         DEFAULT NULL,
-    `article` varchar(255)        DEFAULT NULL,
-    `created` date       NOT NULL,
-    `deleted` tinyint(1) NOT NULL DEFAULT '0',
-    `user_id` int(11)    NOT NULL,
-    `color`   varchar(30)         DEFAULT NULL
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+CREATE TABLE IF NOT EXISTS `folders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `color` varchar(30) NOT NULL,
+  `title` varchar(30) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=cp1251 AUTO_INCREMENT=19 ;
 
 --
--- Дамп данных таблицы `notes`
+-- Dumping data for table `folders`
 --
 
-INSERT INTO `notes` (`id`, `title`, `article`, `created`, `deleted`, `user_id`, `color`)
-VALUES (4, 'Заметка 1',
-        'Я в своем познании настолько преисполнился, что я как будто бы уже сто триллионов миллиардов лет проживаю на триллионах и триллионах таких же планет, как эта Земля, мне этот мир абсолютно',
-        '1917-02-27', 0, 1, 'FFB6C1')
-        ,
-       (5, 'Заметка 2',
-        'понятен, и я здесь ищу только одного - покоя, умиротворения и вот этой гармонии, от слияния с бесконечно вечным, от созерцания великого фрактального подобия и от вот этого замечательного всеединства',
-        '1917-02-27', 0, 1, 'FF7F50')
-        ,
-       (6, 'Заметка 3',
-        'существа, бесконечно вечного, куда ни посмотри, хоть вглубь - бесконечно малое, хоть ввысь - бесконечное большое, понимаешь? А ты мне опять со своим вот этим, иди суетись дальше, это твоё распределение, это',
-        '1917-02-27', 0, 1, 'FFFACD')
-        ,
-       (7, 'Заметка 4',
-        'твой путь и твой горизонт познания и ощущения твоей природы, он несоизмеримо мелок по сравнению с моим, понимаешь? Я как будто бы уже давно глубокий старец, бессмертный, ну или там уже почти бессмертный,',
-        '1917-02-27', 0, 1, 'FA8072')
-        ,
-       (8, 'Заметка 5',
-        'который на этой планете от её самого зарождения, ещё когда только Солнце только-только сформировалось как звезда, и вот это газопылевое облако, вот, после взрыва, Солнца, когда оно вспыхнуло, как звезда, начало',
-        '1917-02-27', 0, 1, 'DDA0DD')
-        ,
-       (9, 'Заметка 6',
-        'формировать вот эти коацерваты, планеты, понимаешь, я на этой Земле уже как будто почти пять миллиардов лет живу и знаю её вдоль и поперёк этот весь мир, а ты мне какие-то... мне не важно на твои тачки, на твои',
-        '1917-02-27', 0, 1, '7FFFD4')
-        ,
-       (10, 'Заметка $',
-        'мне не важно на твои тачки, на твои яхты, на твои квартиры, там, на твоё благо. Я был на этой планете бесконечным множеством, и круче Цезаря, и круче Гитлера, и круче',
-        '1917-02-27', 0, 1, '87CEEB')
-        ,
-       (11, 'Заметка $',
-        'всех великих, понимаешь, был, а где-то был конченым говном, ещё хуже, чем здесь. Я множество этих состояний чувствую. Где-то я был больше подобен растению, где-то я больше был подобен птице, там, червю, где-то',
-        '1917-02-27', 0, 1, '00FA9A')
-        ,
-       (12, 'Заметка $',
-        'был просто сгусток камня, это всё есть душа, понимаешь? Она имеет грани подобия совершенно многообразные, бесконечное множество. Но тебе этого не понять, поэтому ты езжай себе , мы в этом мире как бы живем',
-        '1917-02-27', 0, 1, '98FB98')
-        ,
-       (14, 'Заметка $',
-        'разными ощущениями и разными стремлениями, соответственно, разное наше и место, разное и наше распределение. Тебе я желаю все самые крутые тачки чтоб были у тебя, и все самые лучше самки, если мало идей, обращайся ко мне, я тебе на каждую',
-        '1917-02-27', 0, 1, NULL)
-        ,
-       (15, 'Заметка $',
-        'твою идею предложу сотню триллионов, как всё делать. Ну а я всё, я иду как глубокий старец,узревший вечное, прикоснувшийся к Божественному, сам стал богоподобен и устремлен в это бесконечное, и который в умиротворении, покое, гармонии, благодати, в этом с',
-        '1917-02-27', 0, 1, NULL)
-        ,
-       (16, 'Заметка $',
-        'блаженстве пребывает, вовлеченный во всё и во вся, понимаешь, вот и всё, в этом наша разница. Так что я иду любоваться мирозданием, а ты идёшь преисполняться в ГРАНЯХ каких-то, вот и вся разница, понимаешь, ты не зришь это вечное бесконечное, оно тебе не ',
-        '1917-02-27', 0, 1, NULL)
-        ,
-       (17, 'Заметка $',
-        'сказать, более активен, как вот этот дятел долбящий, или муравей, который очень активен в своей стезе, поэтому давай, наши пути здесь, конечно, имеют грани подобия, потому что всё едино, но я-то тебя прекрасно понимаю, а вот ты меня - вряд ли, потому что ',
-        '1917-02-27', 0, 1, NULL)
-        ,
-       (18, 'Заметка $',
-        'содержу, всю твою природу, она составляет одну маленькую там песчиночку, от того что есть во мне, вот и всё, поэтому давай, ступай, езжай, а я пошел наслаждаться прекрасным осенним закатом на берегу теплой южной реки. Всё, ступай, и я пойду.',
-        '1917-02-27', 0, 1, NULL);
+INSERT INTO `folders` (`id`, `color`, `title`, `user_id`) VALUES
+(15, '#7FFFD4', 'folder_1', 1),
+(16, '#F6F8FA', 'Folder_2', 1),
+(17, '#FFF493', 'Folder_3', 1),
+(18, '#87CEEB', 'Folder_4', 1);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `users`
+-- Table structure for table `notes`
 --
 
-CREATE TABLE `users`
-(
-    `id`         int(11)     NOT NULL,
-    `login`      varchar(40) NOT NULL,
-    `password`   varchar(40) NOT NULL,
-    `privileges` varchar(1)  NOT NULL,
-    `username`   varchar(40) DEFAULT NULL
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+CREATE TABLE IF NOT EXISTS `notes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) DEFAULT NULL,
+  `article` varchar(255) DEFAULT NULL,
+  `created` date NOT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `folder_id` int(11) NOT NULL,
+  `color` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=cp1251 AUTO_INCREMENT=39 ;
 
 --
--- Дамп данных таблицы `users`
+-- Dumping data for table `notes`
 --
 
-INSERT INTO `users` (`id`, `login`, `password`, `privileges`, `username`)
-VALUES (1, 'user@mail.ru', 'user_password', 'u', 'user'),
-       (2, 'New_user@huya.tv', 'New_user_password', 'u', 'new_user');
-COMMIT;
+INSERT INTO `notes` (`id`, `title`, `article`, `created`, `deleted`, `folder_id`, `color`) VALUES
+(32, 'title', 'jyhgghjhjkg', '2022-06-06', 0, 15, '#7FFFD4'),
+(33, 'gkjgkhjl', 'gljkwjklgwkoj;gw', '2022-06-06', 0, 15, '#7FFFD4'),
+(34, 'aboba', 'gklhjgllwkg', '2022-06-06', 0, 16, '#F6F8FA'),
+(35, '1', 'ggegq', '2022-06-06', 0, 17, '#FFF493'),
+(36, '2', 'ggqgqgfqq', '2022-06-06', 0, 17, '#FFF493'),
+(37, '1', 'fqfq', '2022-06-06', 0, 18, '#87CEEB'),
+(38, '2', 'jyjtjethjeth', '2022-06-06', 0, 18, '#87CEEB');
 
-/*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION = @OLD_COLLATION_CONNECTION */;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `privileges` varchar(1) NOT NULL,
+  `username` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=cp1251 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`, `privileges`, `username`) VALUES
+(1, 'Shulga_M_V@huya.tv', 'ne_nado_dada_strong_password', '1', NULL),
+(2, 'New_user@huya.tv', 'New_user_ahueni_parol', 'u', '');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

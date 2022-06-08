@@ -917,70 +917,113 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="235" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="236" parent="227" name="notes">
+    <table id="236" parent="227" name="folders">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8_general_ci</CollationName>
+      <CollationName>cp1251_general_ci</CollationName>
     </table>
-    <table id="237" parent="227" name="users">
+    <table id="237" parent="227" name="notes">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8_general_ci</CollationName>
+      <CollationName>cp1251_general_ci</CollationName>
     </table>
-    <column id="238" parent="236" name="id">
+    <table id="238" parent="227" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>cp1251_general_ci</CollationName>
+    </table>
+    <column id="239" parent="236" name="id">
+      <AutoIncrement>19</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="239" parent="236" name="title">
+    <column id="240" parent="236" name="color">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="241" parent="236" name="title">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="242" parent="236" name="user_id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <key id="243" parent="236" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="244" parent="237" name="id">
+      <AutoIncrement>39</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="245" parent="237" name="title">
       <DataType>varchar(30)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="240" parent="236" name="article">
-      <DataType>varchar(10000)|0s</DataType>
+    <column id="246" parent="237" name="article">
+      <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="241" parent="236" name="created">
+    <column id="247" parent="237" name="created">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="242" parent="236" name="deleted">
+    <column id="248" parent="237" name="deleted">
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="243" parent="236" name="user_id">
+    <column id="249" parent="237" name="folder_id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="244" parent="236" name="color">
-      <DataType>varchar(30)|0s</DataType>
+    <column id="250" parent="237" name="color">
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="245" parent="237" name="id">
+    <key id="251" parent="237" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="252" parent="238" name="id">
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="246" parent="237" name="login">
+    <column id="253" parent="238" name="login">
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="247" parent="237" name="password">
+    <column id="254" parent="238" name="password">
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="248" parent="237" name="privileges">
+    <column id="255" parent="238" name="privileges">
       <DataType>varchar(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="249" parent="237" name="username">
+    <column id="256" parent="238" name="username">
       <DataType>varchar(40)|0s</DataType>
       <Position>5</Position>
     </column>
+    <key id="257" parent="238" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

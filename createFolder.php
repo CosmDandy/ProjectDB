@@ -1,25 +1,30 @@
 <?php
 require_once("Connections/project_con.php");
 
-$note_id = $_GET['note'];
+$id = $_SESSION['user_id'][0];
 $title = $_POST['title'];
-$article = $_POST['article'];
 $color = $_POST['color'];
-if (($title) && ($article) && ($color)) {
-    $update_query = mysqli_query($link, "UPDATE notes SET title = '$title', article = '$article', color = '$color' WHERE id = $note_id");
+if ($title) 
+{
+    $query = mysqli_query($link, "INSERT INTO folders (title, color, user_id) VALUES ('$title', '$color', '$id')");
 }
-$result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
-$edit_note = mysqli_fetch_array($result);
+
+
+
 ?>
-<!doctype html>
+
+
+
+
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <script type="text/javascript" src="Scripts/script.js"></script>
-    <title><?php echo $edit_note['title']; ?></title>
+    <title>Новая каталог</title>
 </head>
 <body>
 <!-- Menu Left -->
@@ -42,27 +47,27 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
 <!-- Main Content -->
+    
+    <div class="content">
+        <h1>Создать каталог</h1>
+    </div>
+    
 <div class="content_wrapper">
-    <div class="content" style="margin-top: 20vh;">
-        <div class="block" id="block" style="background: <?php echo $edit_note['color']; ?>;">
-            <form name="edit_note" autocomplete="on" method="post" action="">
-                <input type="hidden" name="color" id="color" value="<?php echo $edit_note['color']; ?>">
+    <div class="content" style="padding-top: 25vh">
+        <div class="block" id="block">
+            <form name="new_folder" autocomplete="on" method="post" action="">
+                <input type="hidden" name="color" id="color" value="#F6F8FA">
                 <div class="block_c">
-                    <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">
+                    <input type="text" name="title" id="title" value="title">
                 </div>
                 <div class="block_c">
-                    <textarea name="article" id="article" style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
                 </div>
                 <div class="block_b">
-                    <button type="button" title="К заметкам" onclick="location.href='main.php';">
+                    <button type="button" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
-                    <button type="button" title="Удалить заметку">
-                        <img alt="#" src="Photos/trash.png">
-                    </button>
-                    <button type="submit" title="Сохранить изменения" name="submit">
+                    <button type="submit" name="submit">
                         <img alt="#" src="Photos/check.png">
                     </button>
                 </div>

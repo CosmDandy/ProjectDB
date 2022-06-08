@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="+">
+      <change afterPath="$PROJECT_DIR$/Photos/fon-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Photos/fon-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Photos/fon-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/log_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createFolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deleteFolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readNote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNote.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +54,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/roni/Documents/GitHub/ProjectDB",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "two.files.diff.last.used.file": "/Users/roni/Downloads/1/deletedNotes.php",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -51,10 +69,11 @@
       <recent name="$PROJECT_DIR$/Connections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Photos" />
+      <recent name="$PROJECT_DIR$/Styles" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/Git" />
-      <recent name="$PROJECT_DIR$/Styles" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -73,7 +92,9 @@
       <workItem from="1653565590211" duration="645000" />
       <workItem from="1653567346574" duration="4371000" />
       <workItem from="1653742631824" duration="92000" />
-      <workItem from="1653849998403" duration="21439000" />
+      <workItem from="1653849998403" duration="25639000" />
+      <workItem from="1653922403028" duration="604000" />
+      <workItem from="1654711952551" duration="3328000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>
