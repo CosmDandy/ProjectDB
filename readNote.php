@@ -47,10 +47,10 @@ $edit_note = mysqli_fetch_array($result);
             <form method="post" action="">
                 <input type="hidden" name="color" id="color" value="<?php echo $edit_note['color']; ?>">
                 <div class="block_c">
-                   <h2 align="center"><?php echo $edit_note['title']; ?></h2>
+                    <h2 align="center"><?php echo $edit_note['title']; ?></h2>
                 </div>
                 <div class="block_c">
-                        <h2><?php echo $edit_note['article']; ?></h2>
+                    <h2><?php echo $edit_note['article']; ?></h2>
                 </div>
                 <div class="block_b">
                     <button type="button" title="К заметкам" onclick="location.href='main.php';">
@@ -59,7 +59,8 @@ $edit_note = mysqli_fetch_array($result);
                     <button type="button" title="Удалить заметку">
                         <img alt="#" src="Photos/trash.png">
                     </button>
-                    <button type="button" title="Редактировать заметку" onclick="location.href='editNote.php?note=<?php echo $edit_note["id"];?>;'">
+                    <button type="button" title="Редактировать заметку"
+                            onclick="location.href='editNote.php?note=<?php echo $edit_note["id"]; ?>;'">
                         <img alt="#" src="Photos/edit-note.png">
                     </button>
                 </div>

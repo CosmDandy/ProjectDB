@@ -7,7 +7,6 @@ $folder = $_GET['folder'];
 $color_query = mysqli_query($link, "SELECT color FROM folders WHERE id = '$folder'");
 $color_array = mysqli_fetch_array($color_query);
 $color = $color_array['color'];
-echo $color;
 
 $title = $_POST['title'];
 $article = $_POST['article'];

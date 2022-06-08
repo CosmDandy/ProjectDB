@@ -3,10 +3,7 @@ require_once("Connections/project_con.php");
 
 $user = $_SESSION['user_id'][0];
 $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -60,24 +57,19 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
         <h1>Каталоги</h1>
     </div>
     <div class="content">
-                <!-- Search notes-->
-        <?php
-            while ($folder = mysqli_fetch_array($select_folder)) 
-            {
-        ?>
-                <!-- Notes -->
-                    <div class="block note" title="Заметки"
-                         style="background: <?php echo $folder['color']; ?>"
-                         onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
-                        <div>
-                            <div class="note_head">
-                                <h2><?php echo $folder['title']; ?></h2>
-                            </div>
-                        </div>
+        <!-- Search notes-->
+        <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
+            <!-- Notes -->
+            <div class="block note" title="Заметки"
+                 style="background: <?php echo $folder['color']; ?>"
+                 onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
+                <div>
+                    <div class="note_head">
+                        <h2><?php echo $folder['title']; ?></h2>
                     </div>
-                <?php 
-            }
-        ?>
+                </div>
+            </div>
+        <?php } ?>
     </div>
 </div>
 <div class="menu menu_right">

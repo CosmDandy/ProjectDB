@@ -53,7 +53,8 @@ $edit_note = mysqli_fetch_array($result);
                     <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">
                 </div>
                 <div class="block_c">
-                    <textarea name="article" id="article" style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
+                    <textarea name="article" id="article"
+                              style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
                 </div>
                 <div class="block_b">
                     <button type="button" title="К заметкам" onclick="location.href='main.php';">
@@ -67,6 +68,12 @@ $edit_note = mysqli_fetch_array($result);
                     </button>
                 </div>
             </form>
+			<form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>">
+     				<input type="hidden" value="<?php echo $note_id?>" name="n_note">
+                    <button type="submit" title="Удалить заметку" name="delNote">
+                        <img alt="#" src="Photos/trash.png">
+                    </button>
+   					</form>
         </div>
     </div>
 </div>

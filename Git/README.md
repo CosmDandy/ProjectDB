@@ -21,7 +21,7 @@
 - При нажатии на
     ```HTML
     <button type="submit" title="Сохранить изменения" name="submit" onclick="location.href='main.php';">
-        <img alt="#" src="Photos/check.png">
+        <img alt="#" src="../Photos/check.png">
     </button>
     ```
   в ``editNote.php`` изменение должно отправляться на сервер и кидать на main, второго оно в свою очередь не делает, при зпмене ``<button>`` на ``<input>`` все работает, но надо попытаться реализовать через ``<button>``.

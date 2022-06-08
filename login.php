@@ -29,10 +29,9 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
     <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <link rel="stylesheet" type="text/css" href="Styles/log_style.css">
     <title>Авторизация</title>
 </head>
-<body>
+<body style="animation: change-background 12s ease infinite;">
 <div class="content" style="width: 22em; margin-top: 25vh">
     <div class="block">
         <form name="login" autocomplete="on" method="post" action="">

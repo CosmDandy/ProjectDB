@@ -8,14 +8,7 @@ if ($title)
 {
     $query = mysqli_query($link, "INSERT INTO folders (title, color, user_id) VALUES ('$title', '$color', '$id')");
 }
-
-
-
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -48,20 +41,16 @@ if ($title)
     </button>
 </div>
 <!-- Main Content -->
-    
+<div class="content_wrapper">
     <div class="content">
         <h1>Создать каталог</h1>
     </div>
-    
-<div class="content_wrapper">
     <div class="content" style="padding-top: 25vh">
         <div class="block" id="block">
             <form name="new_folder" autocomplete="on" method="post" action="">
                 <input type="hidden" name="color" id="color" value="#F6F8FA">
                 <div class="block_c">
                     <input type="text" name="title" id="title" value="title">
-                </div>
-                <div class="block_c">
                 </div>
                 <div class="block_b">
                     <button type="button" onclick="location.href='main.php';">
