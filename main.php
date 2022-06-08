@@ -62,7 +62,7 @@ $select_note = mysqli_query($link, "SELECT * FROM notes");
             if (!($note['deleted'])) { ?>
                 <!-- Notes -->
                 <div class="block note" title="Редактировать заметку" style="background: <?php echo $note['color']; ?>"
-                     onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                     onclick="location.href='readNote.php?note=<?php echo $note["id"]; ?>;'">
                     <div>
                         <div class="note_head">
                             <h2><?php echo $note['title']; ?></h2>
