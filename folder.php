@@ -102,7 +102,7 @@ if (!empty($where_list)) {
                 <!-- Search notes-->
                 <div class="block note" title="Редактировать заметку"
                      style="background: <?php echo $res_array['color']; ?>"
-                     onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
+                     onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
                     <div>
                         <div class="note_head">
                             <h2><?php echo $res_array['title']; ?></h2>
@@ -122,7 +122,7 @@ if (!empty($where_list)) {
                     <!-- Notes -->
                     <div class="block note" title="Редактировать заметку"
                          style="background: <?php echo $note['color']; ?>"
-                         onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                         onclick="location.href='readNote.php?note=<?php echo $note["id"]; ?>;'">
                         <div>
                             <div class="note_head">
                                 <h2><?php echo $note['title']; ?></h2>
