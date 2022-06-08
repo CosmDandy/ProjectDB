@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="Add all guys files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/folder.php" afterDir="false" />
-    </list>
+    <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="Add all guys files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +76,7 @@
       <workItem from="1653742631824" duration="92000" />
       <workItem from="1653849998403" duration="25639000" />
       <workItem from="1653922403028" duration="604000" />
-      <workItem from="1654711952551" duration="12441000" />
+      <workItem from="1654711952551" duration="12672000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>

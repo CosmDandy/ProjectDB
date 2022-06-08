@@ -42,7 +42,7 @@ if (!empty($where_list)) {
 <body>
 
 <!-- Menu -->
-<div class="menu menu_left">
+<div class="menu nav">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
@@ -74,14 +74,6 @@ if (!empty($where_list)) {
             </div>
         </form>
     </div>
-</div>
-<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
 </div>
 <script>
     $(document).ready(function () {
