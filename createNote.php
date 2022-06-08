@@ -27,7 +27,7 @@ if (($title) && ($article))
 </head>
 <body>
 <!-- Menu Left -->
-<div class="menu menu_left">
+<div class="menu nav">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
@@ -48,7 +48,7 @@ if (($title) && ($article))
 </div>
 <!-- Main Content -->
 <div class="content_wrapper">
-    <div class="content" style="padding-top: 25vh">
+    <div class="content" style="padding-top: 23vh">
         <div class="block" id="block">
             <form name="new_note" autocomplete="on" method="post" action="">
                 <input type="hidden" name="created" id="created" value="<?php echo date('Y-m-d'); ?>">
@@ -69,35 +69,6 @@ if (($title) && ($article))
             </form>
         </div>
     </div>
-</div>
-<!-- Right Menu -->
-<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
-    <div>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(3)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(4)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(5)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(6)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-    </div>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
 </div>
 </body>
 </html>

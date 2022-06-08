@@ -21,7 +21,7 @@ if ($title)
 </head>
 <body>
 <!-- Menu Left -->
-<div class="menu menu_left">
+<div class="menu nav">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
@@ -63,35 +63,6 @@ if ($title)
             </form>
         </div>
     </div>
-</div>
-<!-- Right Menu -->
-<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
-    <div>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(3)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(4)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(5)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-        <button type="button" title="Цвет" onclick="Change_bg_Color(6)">
-            <img alt="#" src="Photos/add.png">
-        </button>
-    </div>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
 </div>
 </body>
 </html>
