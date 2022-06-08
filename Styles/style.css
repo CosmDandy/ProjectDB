@@ -44,7 +44,7 @@ button:hover img {
 
 /* Input, Textarea */
 
-input, textarea {
+input, textarea, select {
     width: -webkit-fill-available;
     resize: none;
     font-size: 1em;
@@ -64,8 +64,8 @@ h1, h2, h3, h4, h4, h6, p, a {
 h1 {
     width: 60em;
     min-width: 9em;
-    margin: 0 1em;
-    font-size: 2em;
+    margin: 0 1.3em;
+    font-size: 1.6em;
     font-family: 'SF Pro Bold', monospace;
 }
 
@@ -96,18 +96,6 @@ p {
     justify-content: space-between;
 }
 
-.menu_left {
-    float: left;
-    left: 0;
-    border-right: 0.15em solid rgba(115, 115, 115, 0.3);
-}
-
-.menu_right {
-    float: right;
-    right: 0;
-    border-left: 0.15em solid rgba(115, 115, 115, 0.3);
-}
-
 .menu img {
     margin-top: 0.1em;
     width: 2.2em;
@@ -115,6 +103,28 @@ p {
 
 .menu button {
     margin: 0.75em;
+}
+
+.nav {
+    float: left;
+    left: 0;
+    border-right: 0.15em solid rgba(115, 115, 115, 0.3);
+}
+
+.folders_m {
+    display: block;
+    float: right;
+    right: 0;
+    border-left: 0.15em solid rgba(115, 115, 115, 0.3);
+    width: 15em
+}
+
+.folders {
+    padding: 1em 0.75em;
+}
+
+.folders:hover {
+    opacity: 0.5;
 }
 
 /* Content Wrapper */
@@ -160,6 +170,18 @@ p {
 
 .search img {
     width: 1.5em;
+}
+
+/* Sort */
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0 0;
+}
+
+.sort input, .sort select {
+    width: 10em;
 }
 
 /* Block */

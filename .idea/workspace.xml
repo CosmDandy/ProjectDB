@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="Add all guys files">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sorting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Photos/plus.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Git/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/log_style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/createFolder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/folder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/readNote.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +57,9 @@
       <recent name="$PROJECT_DIR$/Connections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Photos" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Git" />
-      <recent name="$PROJECT_DIR$/Photos" />
       <recent name="$PROJECT_DIR$/Styles" />
       <recent name="$PROJECT_DIR$/SQL" />
     </key>
@@ -91,7 +82,7 @@
       <workItem from="1653742631824" duration="92000" />
       <workItem from="1653849998403" duration="25639000" />
       <workItem from="1653922403028" duration="604000" />
-      <workItem from="1654711952551" duration="5403000" />
+      <workItem from="1654711952551" duration="11166000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>

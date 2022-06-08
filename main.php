@@ -3,6 +3,7 @@ require_once("Connections/project_con.php");
 
 $user = $_SESSION['user_id'][0];
 $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
+$select_note = mysqli_query($link, "SELECT * FROM notes");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
 <body>
 
 <!-- Menu -->
-<div class="menu menu_left">
+<div class="menu nav">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
@@ -38,7 +39,7 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
 </div>
 
 <!-- Main Content -->
-<div class="content_wrapper">
+<div class="content_wrapper" style="width: calc(100% - 30em);">
     <!-- Search-->
     <div class="content">
         <div class="search">
@@ -57,28 +58,36 @@ $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$us
         <h1>Каталоги</h1>
     </div>
     <div class="content">
-        <!-- Search notes-->
-        <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
-            <!-- Notes -->
-            <div class="block note" title="Заметки"
-                 style="background: <?php echo $folder['color']; ?>"
-                 onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
-                <div>
-                    <div class="note_head">
-                        <h2><?php echo $folder['title']; ?></h2>
+        <?php while ($note = mysqli_fetch_array($select_note)) {
+            if (!($note['deleted'])) { ?>
+                <!-- Notes -->
+                <div class="block note" title="Редактировать заметку" style="background: <?php echo $note['color']; ?>"
+                     onclick="location.href='editNote.php?note=<?php echo $note["id"]; ?>;'">
+                    <div>
+                        <div class="note_head">
+                            <h2><?php echo $note['title']; ?></h2>
+                        </div>
+                        <div class="note_text">
+                            <h3><?php echo $note['article']; ?></h3>
+                        </div>
+                    </div>
+                    <div class="note_date">
+                        <p><?php echo $note['created']; ?></p>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php }
+        } ?>
     </div>
 </div>
-<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
+<div class="menu folders_m">
+    <h1 style="margin: 0 1em 1em">Пространства</h1>
+    <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
+        <!-- Notes -->
+        <div class="folders" style="background: <?php echo $folder['color']; ?>"
+             onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
+            <h2><?php echo $folder['title']; ?></h2>
+        </div>
+    <?php } ?>
 </div>
 </body>
 </html>

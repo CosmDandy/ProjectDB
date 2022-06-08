@@ -7,6 +7,7 @@ if (isset($_POST['delNote'])) {
     mysqli_query($link, "UPDATE notes Set deleted = 1 WHERE id=$note_id");
 }
 $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id = '$folder' ORDER BY created DESC ");
+$select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
 
 $user_search = str_replace(',', ' ', $_GET['user_search']);
 $search_words = explode(' ', $user_search);
@@ -42,7 +43,7 @@ if (!empty($where_list)) {
 <body>
 
 <!-- Menu -->
-<div class="menu menu_left">
+<div class="menu nav">
     <button type="button" title="Аккаунт" onclick="location.href='account.php';">
         <img alt="#" src="Photos/user.png">
     </button>
@@ -63,7 +64,7 @@ if (!empty($where_list)) {
 </div>
 
 <!-- Main Content -->
-<div class="content_wrapper">
+<div class="content_wrapper" style="width: calc(100% - 30em);">
     <!-- Search-->
     <div class="content">
         <div class="search">
@@ -77,23 +78,25 @@ if (!empty($where_list)) {
                 <input type="hidden" value="<?php echo $folder; ?>" name="folder">
             </form>
         </div>
-    </div>
-    <!-- Note boxes-->
-    <div class="content">
-        <h1>Заметки</h1>
-        <form>
+        <form class="search sort">
             <input id="dat1" class="cont_row n_date" type="date" value="2003-10-05">
-            <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
             <select class="item_sorting" id="n_sort">
                 <option class="notes_sorting">By date desc</option>
                 <option class="notes_sorting">By date asc</option>
                 <option class="notes_sorting">By name asc</option>
                 <option class="notes_sorting">By name desc</option>
             </select>
+            <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
         </form>
-        <h1><a href="createNote.php?folder=<?php echo $folder ?>">Создать заметку</a></h1>
+    </div>
+    <!-- Note boxes-->
+    <div class="content">
+        <h1>Заметки</h1>
     </div>
     <div class="content">
+        <div class="block note" title="Создать заметку" onclick="location.href='createNote.php?folder=<?php echo $folder ?>'">
+            <img src="Photos/plus.png" style="width: 5em; margin: 3em; opacity: 0.5;">
+        </div>
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
                 <!-- Search notes-->
@@ -137,13 +140,15 @@ if (!empty($where_list)) {
         } ?>
     </div>
 </div>
-<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
+<div class="menu folders_m">
+    <h1 style="margin: 0 1em 1em">Пространства</h1>
+    <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
+        <!-- Notes -->
+        <div class="folders" style="background: <?php echo $folder['color']; ?>"
+             onclick="location.href='folder.php?folder=<?php echo $folder["id"]; ?>'">
+            <h2><?php echo $folder['title']; ?></h2>
+        </div>
+    <?php } ?>
 </div>
 <script>
     $(document).ready(function () {
