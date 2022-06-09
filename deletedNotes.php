@@ -129,12 +129,15 @@ if (!empty($where_list)) {
                                     <h3><?php echo $note['article']; ?></h3>
                                 </div>
                             </div>
-                            <div class="note_date">
-                                <p><?php echo $note['created']; ?></p>
-                            </div>
                             <input type="hidden" name='n_note' value='<?php echo $note['id']; ?>'>
-                            <button type='submit' name="but1">Удалить</button>
-                            <button type='submit' name='but2'>Восстановить</button>
+                            <div class="del_b">
+                                <button type="submit" name="but1">
+                                    <img alt="#" src="Photos/x-mark.png">
+                                </button>
+                                <button type="submit" name='but2'>
+                                    <img alt="#" src="Photos/check.png">
+                                </button>
+                            </div>
                         </div>
                     </form>
                 <?php }
