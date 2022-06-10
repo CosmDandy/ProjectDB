@@ -87,6 +87,7 @@ p {
 /* Menu */
 
 .menu {
+    float: left;
     position: fixed;
     width: 4.5em;
     height: calc(100vh - 2em);
@@ -94,6 +95,19 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 0.15em solid rgba(115, 115, 115, 0.5);
+}
+
+.menu_left {
+    float: left;
+    left: 0;
+    border-right: 0.15em solid rgba(115, 115, 115, 0.3);
+}
+
+.menu_right {
+    float: right;
+    right: 0;
+    border-left: 0.15em solid rgba(115, 115, 115, 0.3);
 }
 
 .menu img {

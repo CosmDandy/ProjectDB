@@ -17,7 +17,7 @@ if ($title)
     <script type="text/javascript" src="Scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
-    <title>Новая каталог</title>
+    <title>Новый каталог</title>
 </head>
 <body>
 <!-- Menu Left -->
@@ -63,6 +63,34 @@ if ($title)
             </form>
         </div>
     </div>
+</div>
+	<div class="menu menu_right">
+    <button type="button" title="Сменить цветовую тему">
+        <img alt="#" src="Photos/contrast.png">
+    </button>
+    <div>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(2)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(3)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(4)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(5)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+        <button type="button" title="Цвет" onclick="Change_bg_Color(6)">
+            <img alt="#" src="Photos/add.png">
+        </button>
+    </div>
+    <button type="button" title="Помощь">
+        <img alt="#" src="Photos/question.png">
+    </button>
 </div>
 </body>
 </html>

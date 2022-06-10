@@ -16,11 +16,14 @@ if ($ord == "By name desc") {
 if ($ord == "By date asc") {
     $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id = '$folder' and created BETWEEN '$dat1' and '$dat2' ORDER BY created ASC");
 }
+echo '<div class="block note" title="Создать заметку" onclick="location.href=`createNote.php?folder=' .  $folder_id  . '`">
+            <img src="Photos/plus.png" style="width: 5em; margin: 3em; opacity: 0.5;">
+        </div>';
 while ($note = mysqli_fetch_array($select_note)) {
     if (!($note['deleted'])) {
         echo '<div class="block note" title="Редактировать заметку"
                          style="background:' . $note['color'] . '"' .
-            'onclick="location.href=`editNote.php?note=' . $note["id"] . '`">
+            'onclick="location.href=`readNote.php?note=' . $note["id"] . '`">
                         <div>
                             <div class="note_head">
                                 <h2>' . $note['title'] . '</h2>

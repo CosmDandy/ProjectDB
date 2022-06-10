@@ -3,7 +3,7 @@ require_once("Connections/project_con.php");
 
 $user = $_SESSION['user_id'][0];
 $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
-$select_note = mysqli_query($link, "SELECT * FROM notes");
+$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELECT id FROM folders WHERE user_id = '$user')");
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ $select_note = mysqli_query($link, "SELECT * FROM notes");
     </div>
     <!-- Note boxes-->
     <div class="content">
-        <h1>Каталоги</h1>
+        <h1>Все заметки</h1>
     </div>
     <div class="content">
         <?php while ($note = mysqli_fetch_array($select_note)) {
@@ -80,7 +80,7 @@ $select_note = mysqli_query($link, "SELECT * FROM notes");
     </div>
 </div>
 <div class="menu folders_m">
-    <h1 style="margin: 0 1em 1em">Пространства</h1>
+    <h1 style="margin: 0 1em 1em">Каталоги</h1>
     <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
         <!-- Notes -->
         <div class="folders" style="background: <?php echo $folder['color']; ?>"

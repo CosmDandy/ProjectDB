@@ -1,12 +1,12 @@
 <?php
 require_once("Connections/project_con.php");
 $user = $_SESSION['user_id'][0];
-$folder = $_GET['folder'];
+$folder_id = $_GET['folder'];
 if (isset($_POST['delNote'])) {
     $note_id = $_POST['n_note'];
     mysqli_query($link, "UPDATE notes Set deleted = 1 WHERE id=$note_id");
 }
-$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id = '$folder' ORDER BY created DESC ");
+$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id = '$folder_id' ORDER BY created DESC ");
 $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
 
 $user_search = str_replace(',', ' ', $_GET['user_search']);
@@ -21,7 +21,7 @@ if (count($search_words) > 0) {
     }
 }
 
-$where_list = "SELECT * FROM notes WHERE folder_id = $folder AND";
+$where_list = "SELECT * FROM notes WHERE folder_id = $folder_id AND";
 foreach ($final_search_words as $word) {
     $where_list .= " article LIKE '%$word%' OR";
 }
@@ -75,7 +75,7 @@ if (!empty($where_list)) {
                 <button type="submit">
                     <img alt="#" src="Photos/search.png">
                 </button>
-                <input type="hidden" value="<?php echo $folder; ?>" name="folder">
+                <input type="hidden" value="<?php echo $folder_id; ?>" name="folder">
             </form>
         </div>
         <form class="search sort">
@@ -93,8 +93,8 @@ if (!empty($where_list)) {
     <div class="content">
         <h1>Заметки</h1>
     </div>
-    <div class="content">
-        <div class="block note" title="Создать заметку" onclick="location.href='createNote.php?folder=<?php echo $folder ?>'">
+    <div class="content notes">
+        <div class="block note" title="Создать заметку" onclick="location.href='createNote.php?folder=<?php echo $folder_id ?>'">
             <img src="Photos/plus.png" style="width: 5em; margin: 3em; opacity: 0.5;">
         </div>
         <?php if ($final_search_words[0] != "") { ?>
@@ -156,8 +156,7 @@ if (!empty($where_list)) {
             let orderBy = $(this).val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-            let folder = '<?php echo $folder?>'
-            console.log(orderBy);
+            let folder = "<?php echo $folder_id; ?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",
@@ -168,8 +167,7 @@ if (!empty($where_list)) {
                     folder: folder,
                 },
                 success: (data) => {
-                    console.log(1);
-                    console.log(data);
+					console.log(data);
                     $('.notes').html(data);
                 },
 
@@ -179,7 +177,7 @@ if (!empty($where_list)) {
             let orderBy = $('.n_date').val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-            let folder = '<?php echo $folder?>'
+            let folder = "<?php echo $folder_id?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",

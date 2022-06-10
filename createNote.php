@@ -14,6 +14,7 @@ $created = $_POST['created'];
 if (($title) && ($article)) 
 {
     $query = mysqli_query($link, "INSERT INTO notes (title, article, created, deleted, folder_id, color) VALUES ('$title', '$article', '$created', 0, '$folder', '$color')");
+	header('Location: ' . 'folder.php?folder=' . $folder);
 }?>
 <!DOCTYPE html>
 <html lang="ru">
