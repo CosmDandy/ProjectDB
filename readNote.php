@@ -45,11 +45,12 @@ $edit_note = mysqli_fetch_array($result);
     <div class="content" style="margin-top: 20vh;">
         <div class="block" id="block" style="background: <?php echo $edit_note['color']; ?>;">
             <div class="block_c">
-                <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>">
+                <input type="text" name="title" id="title" value="<?php echo $edit_note['title']; ?>" disabled>
             </div>
             <div class="block_c">
-                    <textarea name="article" id="article"
-                              style="height: 20em"><?php echo $edit_note['article']; ?></textarea>
+                <textarea name="article" id="article" style="height: 20em"
+                          disabled><?php echo $edit_note['article']; ?>
+                </textarea>
             </div>
             <div class="block_b">
                 <button type="button" title="К заметкам" onclick="location.href='main.php';">

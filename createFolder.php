@@ -41,7 +41,7 @@ if ($title)
     </button>
 </div>
 <!-- Main Content -->
-<div class="content_wrapper">
+<div class="content_wrapper" style="width: calc(100% - 20em);">
     <div class="content">
         <h1>Создать каталог</h1>
     </div>
@@ -65,9 +65,7 @@ if ($title)
     </div>
 </div>
 	<div class="menu menu_right">
-    <button type="button" title="Сменить цветовую тему">
-        <img alt="#" src="Photos/contrast.png">
-    </button>
+    <button></button>
     <div>
         <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
             <img alt="#" src="Photos/add.png">
@@ -88,9 +86,7 @@ if ($title)
             <img alt="#" src="Photos/add.png">
         </button>
     </div>
-    <button type="button" title="Помощь">
-        <img alt="#" src="Photos/question.png">
-    </button>
+        <button></button>
 </div>
 </body>
 </html>

@@ -77,11 +77,7 @@ if (!empty($where_list)) {
                 </button>
             </form>
         </div>
-    </div>
-    <!-- Note boxes-->
-    <div class="content">
-        <h1>Все заметки</h1>
-		<form class="search sort">
+        <form class="search sort">
             <input id="dat1" class="cont_row n_date" type="date" value="2003-10-05">
             <select class="item_sorting" id="n_sort">
                 <option class="notes_sorting">By date desc</option>
@@ -91,6 +87,10 @@ if (!empty($where_list)) {
             </select>
             <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
         </form>
+    </div>
+    <!-- Note boxes-->
+    <div class="content">
+        <h1>Все заметки</h1>
     </div>
     <div class="content notes">
 		<?php if ($final_search_words[0] != "") { ?>
@@ -135,7 +135,7 @@ if (!empty($where_list)) {
     </div>
 </div>
 <div class="menu folders_m">
-    <h1 style="margin: 0 1em 1em">Каталоги</h1>
+    <h1 style="margin: 0.5em auto 1em; width: 5em;">Каталоги</h1>
     <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
         <!-- Notes -->
         <div class="folders" style="background: <?php echo $folder['color']; ?>"
