@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="Add all guys files">
-      <change beforePath="$PROJECT_DIR$/Photos/IMG_1292.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/createFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/createFolder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/developers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/folder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/readNote.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Git/devs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/project.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +89,7 @@
       <workItem from="1654793431320" duration="1507000" />
       <workItem from="1654889170167" duration="800000" />
       <workItem from="1655025727498" duration="15333000" />
-      <workItem from="1655051279502" duration="5679000" />
+      <workItem from="1655051279502" duration="9341000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>
