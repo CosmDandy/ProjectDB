@@ -37,11 +37,11 @@ while ($login_arr = mysqli_fetch_array($login_arr_q) and $pass_arr = mysqli_fetc
         <form name="login" autocomplete="on" method="post" action="">
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="text" name="login" value="1" placeholder="Login" required>
+                <input type="text" name="login" value="login" placeholder="Login" required>
             </div>
             <div class="block_c" style="position: relative">
                 <h3>Password</h3>
-                <input type="password" name="pass" id="password" value="1"
+                <input type="password" name="pass" id="password" value="login"
                        placeholder="Password" required>
                 <div class="pass" onclick="return show_hide_password(this);">
                     <img id="pass" alt="#" src="Photos/show.png">

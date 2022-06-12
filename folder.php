@@ -23,7 +23,7 @@ if (count($search_words) > 0) {
 
 $where_list = "SELECT * FROM notes WHERE folder_id = $folder_id AND";
 foreach ($final_search_words as $word) {
-    $where_list .= " article LIKE '%$word%' OR";
+    $where_list .= " title LIKE '%$word%' OR";
 }
 $where_list = substr($where_list, 0, -3);
 if (!empty($where_list)) {
@@ -78,10 +78,10 @@ if (!empty($where_list)) {
                 <input type="hidden" value="<?php echo $folder_id; ?>" name="folder">
             </form>
         </div>
-        <form class="search sort">
+       	<form class="search sort">
             <input id="dat1" class="cont_row n_date" type="date" value="2003-10-05">
             <select class="item_sorting" id="n_sort">
-                <option class="notes_sorting">By date desc</option>
+                <option class="notes_sorting" selected>By date desc</option>
                 <option class="notes_sorting">By date asc</option>
                 <option class="notes_sorting">By name asc</option>
                 <option class="notes_sorting">By name desc</option>
@@ -98,7 +98,8 @@ if (!empty($where_list)) {
             <img src="Photos/plus.png" style="width: 5em; margin: 3em; opacity: 0.5;">
         </div>
         <?php if ($final_search_words[0] != "") { ?>
-            <?php while ($res_array = mysqli_fetch_array($res_query)) { ?>
+            <?php while ($res_array = mysqli_fetch_array($res_query)) {
+				if (!($res_array['deleted'])) {?>
                 <!-- Search notes-->
                 <div class="block note" title="Редактировать заметку"
                      style="background: <?php echo $res_array['color']; ?>"
@@ -116,7 +117,7 @@ if (!empty($where_list)) {
                     </div>
                 </div>
             <?php }
-        } else {
+        }} else {
             while ($note = mysqli_fetch_array($select_note)) {
                 if (!($note['deleted'])) { ?>
                     <!-- Notes -->

@@ -3,7 +3,31 @@ require_once("Connections/project_con.php");
 
 $user = $_SESSION['user_id'][0];
 $select_folder = mysqli_query($link, "SELECT * FROM folders WHERE user_id = '$user'");
-$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELECT id FROM folders WHERE user_id = '$user')");
+$select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELECT id FROM folders WHERE user_id = '$user') ORDER BY created DESC");
+$user_search = str_replace(',', ' ', $_GET['user_search']);
+$search_words = explode(' ', $user_search);
+$search_result = "";
+
+$final_search_words = array();
+if (count($search_words) > 0) {
+    foreach ($search_words as $word) {
+        if (!empty($word)) {
+            $final_search_words[] = $word;
+        }
+    }
+}
+
+$where_list = "SELECT * FROM notes WHERE folder_id in (SELECT id FROM folders WHERE user_id = '$user') AND";
+foreach ($final_search_words as $word) {
+    $where_list .= " title LIKE '%$word%' OR";
+	$search_result .= " title LIKE '%$word%' OR";
+}
+$where_list = substr($where_list, 0, -3);
+$search_result = substr($search_result, 0, -3);
+$where_list .= " ORDER BY created DESC";
+if (!empty($where_list)) {
+    $res_query = mysqli_query($link, $where_list);
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +37,7 @@ $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELE
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="Styles/style.css">
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Каталоги</title>
 </head>
 <body>
@@ -56,10 +81,39 @@ $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELE
     <!-- Note boxes-->
     <div class="content">
         <h1>Все заметки</h1>
+		<form class="search sort">
+            <input id="dat1" class="cont_row n_date" type="date" value="2003-10-05">
+            <select class="item_sorting" id="n_sort">
+                <option class="notes_sorting">By date desc</option>
+                <option class="notes_sorting">By date asc</option>
+                <option class="notes_sorting">By name asc</option>
+                <option class="notes_sorting">By name desc</option>
+            </select>
+            <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
+        </form>
     </div>
-    <div class="content">
-        <?php while ($note = mysqli_fetch_array($select_note)) {
-            if (!($note['deleted'])) { ?>
+    <div class="content notes">
+		<?php if ($final_search_words[0] != "") { ?>
+            <?php while ($res_array = mysqli_fetch_array($res_query)) {
+				if (!($res_array['deleted'])) {  ?>
+				<div class="block note" title="Редактировать заметку" style="background: <?php echo $res_array['color']; ?>"
+                     onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
+                    <div>
+                        <div class="note_head">
+                            <h2><?php echo $res_array['title']; ?></h2>
+                        </div>
+                        <div class="note_text">
+                            <h3><?php echo $res_array['article']; ?></h3>
+                        </div>
+                    </div>
+                    <div class="note_date">
+                        <p><?php echo $res_array['created']; ?></p>
+                    </div>
+                </div>
+		<?php }
+        }} else {
+            while ($note = mysqli_fetch_array($select_note)) {
+                if (!($note['deleted'])) { ?>
                 <!-- Notes -->
                 <div class="block note" title="Редактировать заметку" style="background: <?php echo $note['color']; ?>"
                      onclick="location.href='readNote.php?note=<?php echo $note["id"]; ?>;'">
@@ -76,6 +130,7 @@ $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELE
                     </div>
                 </div>
             <?php }
+            }
         } ?>
     </div>
 </div>
@@ -89,5 +144,50 @@ $select_note = mysqli_query($link, "SELECT * FROM notes WHERE folder_id in (SELE
         </div>
     <?php } ?>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#n_sort').change(function () {
+            let orderBy = $(this).val()
+            let dat1 = $('#dat1').val()
+            let dat2 = $('#dat2').val()
+            let search = "<?php echo $search_result; ?>"
+            $.ajax({
+                url: 'sorting.php',
+                type: "POST",
+                data: {
+                    orderBy: orderBy,
+                    dat1: dat1,
+                    dat2: dat2,
+                    search: search,
+                },
+                success: (data) => {
+                    $('.notes').html(data);
+                },
+
+            })
+        });
+        $('.n_date').change(function () {
+            let orderBy = $('.n_date').val()
+            let dat1 = $('#dat1').val()
+            let dat2 = $('#dat2').val()
+            let search = "<?php echo $search_result; ?>"
+            $.ajax({
+                url: 'sorting.php',
+                type: "POST",
+                data: {
+                    orderBy: orderBy,
+                    dat1: dat1,
+                    dat2: dat2,
+                    search: search,
+                },
+                success: (data) => {
+                    $('.notes').html(data);
+                },
+
+            })
+        })
+    })
+    })
+</script>
 </body>
 </html>

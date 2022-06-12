@@ -7,6 +7,7 @@ $article = $_POST['article'];
 $color = $_POST['color'];
 if (($title) && ($article) && ($color)) {
     $update_query = mysqli_query($link, "UPDATE notes SET title = '$title', article = '$article', color = '$color' WHERE id = $note_id");
+	header('Location: ' . 'readNote.php?note=' . $note_id);
 }
 $result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
 $edit_note = mysqli_fetch_array($result);

@@ -21,17 +21,10 @@ if ($submit) {
     <link rel="stylesheet" type="text/css" href="Styles/font.css">
 	<link rel="stylesheet" type="text/css" href="Styles/log_style.css">
     <script type="text/javascript" src="Scripts/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-	function CheckCorrect(){
-		var passw1 = document.getElementById('password1').value;
-		var passw2 = document.getElementById('password2').value;
-		if (passw1 != passw2){
-			alert('Пароли не совпали. Повторите попытку.');
-			return false;
-		}
-		return true;
-	}
-</script>
+        CheckCorrect()
+    </script>
 </head>
 <body>
 <div class="content" style="width: 25em; margin-top: 20vh">
@@ -43,7 +36,7 @@ if ($submit) {
             </div>
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="email" name="login" value="New_user@mail.ru" placeholder="Login" required>
+                <input type="email" name="login" id='login' value="New_user@huya.tv" placeholder="Login" required>
             </div>
             <div class="block_c" style="position: relative">
                 <h3>Password</h3>

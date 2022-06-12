@@ -60,7 +60,7 @@ if (($title) && ($article))
                     <textarea style="height: 10em; margin: 1.2em 0;" name="article" id="article"></textarea>
                 </div>
                 <div class="block_b">
-                    <button type="button" onclick="location.href='main.php';">
+                    <button type="button" onclick="location.href='folder.php?folder=<?php echo $folder; ?>';">
                         <img alt="#" src="Photos/back.png">
                     </button>
                     <button type="submit" name="submit">
