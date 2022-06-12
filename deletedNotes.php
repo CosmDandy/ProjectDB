@@ -98,7 +98,7 @@ if (!empty($where_list)) {
             <?php while ($res_array = mysqli_fetch_array($res_query))
                 if ($res_array['deleted']) { ?>
                     <!-- Search notes-->
-                    <div class="block" title="Редактировать заметку"
+                    <div class="block note" title="Редактировать заметку"
                          style="background: <?php echo $res_array['color']; ?>"
                          onclick="location.href='editNote.php?note=<?php echo $res_array["id"]; ?>;'">
                         <div>
@@ -119,7 +119,7 @@ if (!empty($where_list)) {
                 if ($note['deleted']) { ?>
                     <!-- Notes -->
                     <form action="" method="post">
-                        <div class="block" title="Редактировать заметку"
+                        <div class="block note" title="Редактировать заметку"
                              style="background: <?php echo $note['color']; ?>">
                             <div>
                                 <div class="note_head">

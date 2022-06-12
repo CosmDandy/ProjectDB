@@ -31,10 +31,6 @@ if ($submit) {
     <div class="block">
         <form id="register" name="register" method="POST" action="">
             <div class="block_c">
-                <h3>Username</h3>
-                <input type="text" name="username" value="New_user_username" placeholder="Username" required>
-            </div>
-            <div class="block_c">
                 <h3>Email address</h3>
                 <input type="email" name="login" id='login' value="New_user@huya.tv" placeholder="Login" required>
             </div>

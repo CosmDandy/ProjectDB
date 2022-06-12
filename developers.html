@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="Styles/font.css">
+</head>
+<body>
+<div class="menu nav">
+    <button type="button" title="Аккаунт" onclick="location.href='account.php';">
+        <img alt="#" src="Photos/user.png">
+    </button>
+    <div>
+        <button type="button" title="Главная" onclick="location.href='main.php';">
+            <img alt="#" src="Photos/menu.png">
+        </button>
+        <button type="button" title="Новый каталог" onclick="location.href='createFolder.php';">
+            <img alt="#" src="Photos/new-note.png">
+        </button>
+        <button type="button" title="Корзина">
+            <img alt="#" src="Photos/trash.png" onclick="location.href='deletedNotes.php';">
+        </button>
+    </div>
+    <button type="button" title="Выйти" onclick="location.href='logout.php';">
+        <img alt="#" src="Photos/logout.png">
+    </button>
+</div>
+
+<div class="content_wrapper">
+    <div class="content" style="display: flex; justify-content: space-around">
+        <div>
+            <div style="margin: 3em;">
+                <img src="Photos/IMG_1284.jpg" style="height: 14em; display: flex; border-radius: 50%">
+                <h2 style="margin: 1em 0;">Кондрашин Тимофей</h2>
+                <p>UX/UI, Frontend()</p>
+            </div>
+            <div style="margin: 3em;">
+                <img src="Scripts/IMG_1287.jpg" style="height: 14em; width: 14em; display: flex; border-radius: 50%">
+                <h2 style="margin: 1em 0;">Халфеев Тимур</h2>
+                <p>Frontend, Backend</p>
+            </div>
+        </div>
+        <div>
+            <div style="margin: 3em;">
+                <img src="Photos/IMG_1285.jpg" style="height: 14em; display: flex; border-radius: 50%">
+                <h2 style="margin: 1em 0;">Феоктистов Даниил</h2>
+                <p>Backend, DataBase</p>
+            </div>
+            <div style="margin: 3em;">
+                <img src="Photos/IMG_1292.jpg" style="height: 14em; display: flex; border-radius: 50%">
+                <h2 style="margin: 1em 0;">Тюлюкин Денис</h2>
+                <p>Backend, DataBase</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

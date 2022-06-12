@@ -930,7 +930,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>cp1251_general_ci</CollationName>
     </table>
     <column id="239" parent="236" name="id">
-      <AutoIncrement>19</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -956,7 +956,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="244" parent="237" name="id">
-      <AutoIncrement>39</AutoIncrement>
+      <AutoIncrement>13</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -996,7 +996,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="252" parent="238" name="id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1016,11 +1016,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="256" parent="238" name="username">
-      <DataType>varchar(40)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <key id="257" parent="238" name="PRIMARY">
+    <key id="256" parent="238" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="Add all guys files">
+      <change afterPath="$PROJECT_DIR$/Scripts/IMG_1284.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/IMG_1285.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/IMG_1287.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/IMG_1292.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/developers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/93f7294a-dfbc-44e6-8748-1fffd9cd1019.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos/contrast.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos/fon-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos/fon-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos/fon-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Photos/new-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,14 +54,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/roni/Documents/GitHub/ProjectDB",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "two.files.diff.last.used.file": "/Users/roni/Downloads/qqq/main.php",
     "vue.rearranger.settings.migration": "true"
   }
@@ -54,11 +73,11 @@
       <recent name="$PROJECT_DIR$/Connections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Scripts" />
+      <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/Photos" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Git" />
-      <recent name="$PROJECT_DIR$/Styles" />
-      <recent name="$PROJECT_DIR$/SQL" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +103,8 @@
       <workItem from="1654771635141" duration="1582000" />
       <workItem from="1654793431320" duration="1507000" />
       <workItem from="1654889170167" duration="800000" />
-      <workItem from="1655025727498" duration="15270000" />
+      <workItem from="1655025727498" duration="15333000" />
+      <workItem from="1655051279502" duration="5377000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>
@@ -111,8 +131,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="+" />
     <MESSAGE value="Add all guys files" />
     <option name="LAST_COMMIT_MESSAGE" value="Add all guys files" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
