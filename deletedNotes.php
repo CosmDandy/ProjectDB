@@ -91,7 +91,7 @@ if (!empty($where_list)) {
     </div>
     <!-- Note boxes-->
     <div class="content">
-        <h1>Заметки</h1>
+        <h1>Удаленные заметки</h1>
     </div>
     <div class="content">
         <?php if ($final_search_words[0] != "") { ?>

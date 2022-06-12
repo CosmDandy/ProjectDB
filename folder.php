@@ -148,7 +148,7 @@ if (!empty($where_list)) {
     </div>
 </div>
 <div class="menu folders_m">
-    <h1 style="margin: 0 1em 1em">Пространства</h1>
+    <h1 style="margin: 0.5em auto 1em; width: 5em;">Каталоги</h1>
     <?php while ($folder = mysqli_fetch_array($select_folder)) { ?>
         <!-- Notes -->
         <div class="folders" style="background: <?php echo $folder['color']; ?>"

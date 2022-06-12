@@ -45,7 +45,7 @@ if ($title)
     <div class="content">
         <h1>Создать каталог</h1>
     </div>
-    <div class="content" style="padding-top: 25vh">
+    <div class="content" style="padding-top: 27vh; width: 35em">
         <div class="block" id="block">
             <form name="new_folder" autocomplete="on" method="post" action="">
                 <input type="hidden" name="color" id="color" value="#F6F8FA">
@@ -56,7 +56,7 @@ if ($title)
                     <button type="button" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/back.png">
                     </button>
-                    <button type="submit" name="submit">
+                    <button type="submit" name="submit" onclick="location.href='main.php';">
                         <img alt="#" src="Photos/check.png">
                     </button>
                 </div>
