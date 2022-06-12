@@ -4,21 +4,6 @@ body {
     background-color: #ffffff;
 }
 
-@keyframes change-background {
-    0% {
-        background: url("../Photos/fon-1.jpg");
-    }
-    33% {
-        background: url("../Photos/fon-2.jpg");
-    }
-    67% {
-        background: url("../Photos/fon-3.jpg");
-    }
-    100% {
-        background: url("../Photos/fon-1.jpg");
-    }
-}
-
 :hover {
     transition-duration: 0.3s;
 }
