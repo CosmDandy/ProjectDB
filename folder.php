@@ -44,8 +44,8 @@ if (!empty($where_list)) {
 
 <!-- Menu -->
 <div class="menu nav">
-    <button type="button" title="Аккаунт" onclick="location.href='account.php';">
-        <img alt="#" src="Photos/user.png">
+    <button type="button" title="О нас" onclick="location.href='developers.html';">
+        <img alt="#" src="Photos/info.png">
     </button>
     <div>
         <button type="button" title="Главная" onclick="location.href='main.php';">
@@ -62,7 +62,6 @@ if (!empty($where_list)) {
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
 <!-- Main Content -->
 <div class="content_wrapper" style="width: calc(100% - 30em);">
     <!-- Search-->
