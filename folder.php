@@ -88,7 +88,7 @@ if (!empty($where_list)) {
             </select>
             <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
         </form>
-        <form method="post" action>="deleteFolder.php" style="width: 100%; margin: 1em 2em">
+        <form method="post" action="deleteFolder.php" style="width: 100%; margin: 1em 2em">
             <input type="hidden" value="<?php echo $folder_id?>" name="folder">
             <button type="submit" title="Удалить заметку" name="deleteFolder" style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
                 <h2>Удалить каталог</h2>
