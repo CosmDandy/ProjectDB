@@ -65,6 +65,9 @@ if (!empty($where_list)) {
 
 <!-- Main Content -->
 <div class="content_wrapper" style="width: calc(100% - 30em);">
+    <div class="content">
+        <h1>наш ахуенный сайт</h1>
+    </div>
     <!-- Search-->
     <div class="content">
         <div class="search">
@@ -150,7 +153,7 @@ if (!empty($where_list)) {
             let orderBy = $(this).val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-            let search = "<?php echo $search_result; ?>"
+			let search = "<?php echo $search_result; ?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",
@@ -158,7 +161,7 @@ if (!empty($where_list)) {
                     orderBy: orderBy,
                     dat1: dat1,
                     dat2: dat2,
-                    search: search,
+					search: search,
                 },
                 success: (data) => {
                     $('.notes').html(data);
@@ -170,7 +173,7 @@ if (!empty($where_list)) {
             let orderBy = $('.n_date').val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-            let search = "<?php echo $search_result; ?>"
+			let search = "<?php echo $search_result; ?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",
@@ -178,7 +181,7 @@ if (!empty($where_list)) {
                     orderBy: orderBy,
                     dat1: dat1,
                     dat2: dat2,
-                    search: search,
+					search: search,
                 },
                 success: (data) => {
                     $('.notes').html(data);
@@ -186,7 +189,6 @@ if (!empty($where_list)) {
 
             })
         })
-    })
     })
 </script>
 </body>
