@@ -59,7 +59,6 @@ if ($submit) {
                 <input type="submit" name="submit" id="submit" value="Регистрация" class="button"
                        style="width: 100%; background-color: #2da44e;">
             </div>
-
         </form>
     </div>
     <div class="block block_q">

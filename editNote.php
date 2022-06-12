@@ -68,7 +68,7 @@ $edit_note = mysqli_fetch_array($result);
             </form>
 			<form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>">
      				<input type="hidden" value="<?php echo $note_id?>" name="n_note">
-                    <button type="submit" title="Удалить заметку" name="delNote">
+                    <button type="submit" title="Удалить заметку" name="delNote" style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
                         <img alt="#" src="Photos/trash.png">
                     </button>
             </form>
