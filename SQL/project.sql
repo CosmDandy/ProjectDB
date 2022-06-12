@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `privileges`, `username`) VALUES
-(1, 'Shulga_M_V@huya.tv', 'ne_nado_dada_strong_password', '1', NULL),
+(1, 'login', 'password', '1', NULL),
 (2, 'New_user@huya.tv', 'New_user_ahueni_parol', 'u', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
