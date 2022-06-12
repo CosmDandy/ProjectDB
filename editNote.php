@@ -46,7 +46,7 @@ $edit_note = mysqli_fetch_array($result);
 
 <!-- Main Content -->
 <div class="content_wrapper">
-    <div class="content" style="margin-top: 20vh;">
+    <div class="content" style="margin-top: 15vh;">
         <div class="block" id="block" style="background: <?php echo $edit_note['color']; ?>;">
             <form name="edit_note" autocomplete="on" method="post" action="">
                 <input type="hidden" name="color" id="color" value="<?php echo $edit_note['color']; ?>">
@@ -66,7 +66,7 @@ $edit_note = mysqli_fetch_array($result);
                     </button>
                 </div>
             </form>
-			<form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>">
+			<form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>" style="margin: 1em 0">
      				<input type="hidden" value="<?php echo $note_id?>" name="n_note">
                     <button type="submit" title="Удалить заметку" name="delNote" style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
                         <img alt="#" src="Photos/trash.png">

@@ -25,7 +25,7 @@ function show_hide_password_1(target) {
 }
 
 function show_hide_password_2(target) {
-    var ph = document.getElementById("pass1");
+    var ph = document.getElementById("pass2");
     var input = document.getElementById('password2');
     if (input.getAttribute('type') == 'password') {
         input.setAttribute('type', 'text');
