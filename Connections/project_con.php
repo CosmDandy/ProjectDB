@@ -1,6 +1,6 @@
 <?php
 session_start();
-$localhost = "localhost";
+$localhost = "std-mysql";
 $db = "std_1754_project";
 $user = "std_1754_project";
 $password = "cosmdandy";
