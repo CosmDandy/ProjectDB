@@ -7,6 +7,7 @@ $_SESSION['privileges'] = $privileges = $_POST["rights"];
 $_SESSION['login'] = $login = $_POST["login"];
 if ($submit) {
     $new_user = mysqli_query($link, "INSERT INTO users (login, password, privileges) VALUES('$login', '$password', '$privileges')");
+    $_SESSION['user_id'] = mysqli_fetch_array(mysqli_query($link, "SELECT id FROM users WHERE login = '$login' and password = '$password'"));
     $_SESSION['auth'] = 1;
     header('Location: ' . 'main.php');
 } ?>
