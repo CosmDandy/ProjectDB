@@ -33,7 +33,7 @@ if ($submit) {
         <form id="register" name="register" method="POST" action="">
             <div class="block_c">
                 <h3>Email address</h3>
-                <input type="email" name="login" id='login' value="New_user@huya.tv" placeholder="Login" required>
+                <input type="email" name="login" id='login' value="New_user@mail.ru" placeholder="Login" required>
             </div>
             <div class="block_c" style="position: relative">
                 <h3>Password</h3>
