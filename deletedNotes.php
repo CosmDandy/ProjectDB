@@ -48,7 +48,6 @@ if (!empty($where_list)) {
     <title>Заметки</title>
 </head>
 <body>
-
 <!-- Menu -->
 <div class="menu nav">
     <button type="button" title="О нас" onclick="location.href='developers.html';">

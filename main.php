@@ -20,7 +20,7 @@ if (count($search_words) > 0) {
 $where_list = "SELECT * FROM notes WHERE folder_id in (SELECT id FROM folders WHERE user_id = '$user') AND";
 foreach ($final_search_words as $word) {
     $where_list .= " title LIKE '%$word%' OR";
-	$search_result .= " title LIKE '%$word%' OR";
+    $search_result .= " title LIKE '%$word%' OR";
 }
 $where_list = substr($where_list, 0, -3);
 $search_result = substr($search_result, 0, -3);
@@ -29,7 +29,6 @@ if (!empty($where_list)) {
     $res_query = mysqli_query($link, $where_list);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -41,7 +40,6 @@ if (!empty($where_list)) {
     <title>Каталоги</title>
 </head>
 <body>
-
 <!-- Menu -->
 <div class="menu nav">
     <button type="button" title="О нас" onclick="location.href='developers.html';">
@@ -62,7 +60,6 @@ if (!empty($where_list)) {
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
 <!-- Main Content -->
 <div class="content_wrapper" style="width: calc(100% - 30em);">
     <div class="content" style="width: 15.1em;">
@@ -96,43 +93,46 @@ if (!empty($where_list)) {
         <h1>Все заметки</h1>
     </div>
     <div class="content notes">
-		<?php if ($final_search_words[0] != "") { ?>
+        <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) {
-				if (!($res_array['deleted'])) {  ?>
-				<div class="block note" title="Редактировать заметку" style="background: <?php echo $res_array['color']; ?>"
-                     onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
-                    <div>
-                        <div class="note_head">
-                            <h2><?php echo $res_array['title']; ?></h2>
+                if (!($res_array['deleted'])) { ?>
+                    <div class="block note" title="Редактировать заметку"
+                         style="background: <?php echo $res_array['color']; ?>"
+                         onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
+                        <div>
+                            <div class="note_head">
+                                <h2><?php echo $res_array['title']; ?></h2>
+                            </div>
+                            <div class="note_text">
+                                <h3><?php echo $res_array['article']; ?></h3>
+                            </div>
                         </div>
-                        <div class="note_text">
-                            <h3><?php echo $res_array['article']; ?></h3>
+                        <div class="note_date">
+                            <p><?php echo $res_array['created']; ?></p>
                         </div>
                     </div>
-                    <div class="note_date">
-                        <p><?php echo $res_array['created']; ?></p>
-                    </div>
-                </div>
-		<?php }
-        }} else {
+                <?php }
+            }
+        } else {
             while ($note = mysqli_fetch_array($select_note)) {
                 if (!($note['deleted'])) { ?>
-                <!-- Notes -->
-                <div class="block note" title="Редактировать заметку" style="background: <?php echo $note['color']; ?>"
-                     onclick="location.href='readNote.php?note=<?php echo $note["id"]; ?>;'">
-                    <div>
-                        <div class="note_head">
-                            <h2><?php echo $note['title']; ?></h2>
+                    <!-- Notes -->
+                    <div class="block note" title="Редактировать заметку"
+                         style="background: <?php echo $note['color']; ?>"
+                         onclick="location.href='readNote.php?note=<?php echo $note["id"]; ?>;'">
+                        <div>
+                            <div class="note_head">
+                                <h2><?php echo $note['title']; ?></h2>
+                            </div>
+                            <div class="note_text">
+                                <h3><?php echo $note['article']; ?></h3>
+                            </div>
                         </div>
-                        <div class="note_text">
-                            <h3><?php echo $note['article']; ?></h3>
+                        <div class="note_date">
+                            <p><?php echo $note['created']; ?></p>
                         </div>
                     </div>
-                    <div class="note_date">
-                        <p><?php echo $note['created']; ?></p>
-                    </div>
-                </div>
-            <?php }
+                <?php }
             }
         } ?>
     </div>
@@ -153,7 +153,7 @@ if (!empty($where_list)) {
             let orderBy = $(this).val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-			let search = "<?php echo $search_result; ?>"
+            let search = "<?php echo $search_result; ?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",
@@ -161,7 +161,7 @@ if (!empty($where_list)) {
                     orderBy: orderBy,
                     dat1: dat1,
                     dat2: dat2,
-					search: search,
+                    search: search,
                 },
                 success: (data) => {
                     $('.notes').html(data);
@@ -173,7 +173,7 @@ if (!empty($where_list)) {
             let orderBy = $('.n_date').val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
-			let search = "<?php echo $search_result; ?>"
+            let search = "<?php echo $search_result; ?>"
             $.ajax({
                 url: 'sorting.php',
                 type: "POST",
@@ -181,7 +181,7 @@ if (!empty($where_list)) {
                     orderBy: orderBy,
                     dat1: dat1,
                     dat2: dat2,
-					search: search,
+                    search: search,
                 },
                 success: (data) => {
                     $('.notes').html(data);

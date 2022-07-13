@@ -7,7 +7,7 @@ $article = $_POST['article'];
 $color = $_POST['color'];
 if (($title) && ($article) && ($color)) {
     $update_query = mysqli_query($link, "UPDATE notes SET title = '$title', article = '$article', color = '$color' WHERE id = $note_id");
-	header('Location: ' . 'readNote.php?note=' . $note_id);
+    header('Location: ' . 'readNote.php?note=' . $note_id);
 }
 $result = mysqli_query($link, "SELECT * FROM notes WHERE id = $note_id");
 $edit_note = mysqli_fetch_array($result);
@@ -66,11 +66,12 @@ $edit_note = mysqli_fetch_array($result);
                     </button>
                 </div>
             </form>
-			<form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>" style="margin: 1em 0">
-     				<input type="hidden" value="<?php echo $note_id?>" name="n_note">
-                    <button type="submit" title="Удалить заметку" name="delNote" style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
-                        <img alt="#" src="Photos/trash.png">
-                    </button>
+            <form method="post" action="folder.php?folder=<?php echo $edit_note["folder_id"]; ?>" style="margin: 1em 0">
+                <input type="hidden" value="<?php echo $note_id ?>" name="n_note">
+                <button type="submit" title="Удалить заметку" name="delNote"
+                        style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
+                    <img alt="#" src="Photos/trash.png">
+                </button>
             </form>
         </div>
     </div>

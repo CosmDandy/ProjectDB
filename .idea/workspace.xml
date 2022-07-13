@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="+" />
+    <list default="true" id="6bfd5f42-9f64-4cdd-992d-99e8fa254e7b" name="Changes" comment="+">
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/createFolder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deletedNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/deletedNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/editNote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/folder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readNote.php" beforeDir="false" afterPath="$PROJECT_DIR$/readNote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting.php" beforeDir="false" afterPath="$PROJECT_DIR$/sorting.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +103,7 @@
       <workItem from="1655081991316" duration="1246000" />
       <workItem from="1655087832249" duration="489000" />
       <workItem from="1655090171155" duration="254000" />
+      <workItem from="1657720722269" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1653606586705</created>

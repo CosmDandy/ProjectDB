@@ -25,10 +25,6 @@ if (!empty($where_list)) {
     $res_query = mysqli_query($link, $where_list);
 }
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -62,14 +58,17 @@ if (!empty($where_list)) {
     </button>
 </div>
 <div class="content_wrapper">
-    <img>
     <div class="password сontent">
         <form>
-            <h3>Пароль</h3><button>Изменить</button><br>
-            <label>Текущий пароль<input type="password"></label> <div class="pass" onclick="return show_hide_password(this);">
+            <h3>Пароль</h3>
+            <button>Изменить</button>
+            <br>
+            <label>Текущий пароль<input type="password"></label>
+            <div class="pass" onclick="return show_hide_password(this);">
                 <img id="pass" alt="#" src="Photos/show.png">
             </div>
-            <label>Новый пароль<input type="password"></label> <div class="pass" onclick="return show_hide_password(this);">
+            <label>Новый пароль<input type="password"></label>
+            <div class="pass" onclick="return show_hide_password(this);">
                 <img id="pass" alt="#" src="Photos/show.png">
             </div>
         </form>
@@ -77,7 +76,7 @@ if (!empty($where_list)) {
 </div>
 <script>
     $(document).ready(function () {
-        $('#n_sort').change(function (){
+        $('#n_sort').change(function () {
             let orderBy = $(this).val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()
@@ -100,7 +99,7 @@ if (!empty($where_list)) {
 
             })
         });
-        $('.n_date').change(function (){
+        $('.n_date').change(function () {
             let orderBy = $('.n_date').val()
             let dat1 = $('#dat1').val()
             let dat2 = $('#dat2').val()

@@ -10,7 +10,8 @@ if ($submit) {
     $_SESSION['user_id'] = mysqli_fetch_array(mysqli_query($link, "SELECT id FROM users WHERE login = '$login' and password = '$password'"));
     $_SESSION['auth'] = 1;
     header('Location: ' . 'main.php');
-} ?>
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

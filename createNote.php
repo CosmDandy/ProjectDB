@@ -11,11 +11,10 @@ $color = $color_array['color'];
 $title = $_POST['title'];
 $article = $_POST['article'];
 $created = $_POST['created'];
-if (($title) && ($article)) 
-{
+if (($title) && ($article)) {
     $query = mysqli_query($link, "INSERT INTO notes (title, article, created, deleted, folder_id, color) VALUES ('$title', '$article', '$created', 0, '$folder', '$color')");
-	header('Location: ' . 'folder.php?folder=' . $folder);
-}?>
+    header('Location: ' . 'folder.php?folder=' . $folder);
+} ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

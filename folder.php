@@ -41,7 +41,6 @@ if (!empty($where_list)) {
     <title>Каталоги</title>
 </head>
 <body>
-
 <!-- Menu -->
 <div class="menu nav">
     <button type="button" title="О нас" onclick="location.href='developers.html';">
@@ -77,7 +76,7 @@ if (!empty($where_list)) {
                 <input type="hidden" value="<?php echo $folder_id; ?>" name="folder">
             </form>
         </div>
-       	<form class="search sort">
+        <form class="search sort">
             <input id="dat1" class="cont_row n_date" type="date" value="2003-10-05">
             <select class="item_sorting" id="n_sort">
                 <option class="notes_sorting" selected>By date desc</option>
@@ -88,8 +87,9 @@ if (!empty($where_list)) {
             <input id="dat2" class="cont_row n_date" type="date" value=<?php echo date("Y-m-d") ?>>
         </form>
         <form method="post" action="deleteFolder.php" style="width: 100%; margin: 1em 2em">
-            <input type="hidden" value="<?php echo $folder_id?>" name="folder">
-            <button type="submit" title="Удалить заметку" name="deleteFolder" style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
+            <input type="hidden" value="<?php echo $folder_id ?>" name="folder">
+            <button type="submit" title="Удалить заметку" name="deleteFolder"
+                    style="border-radius: 20px; width: 100%; background-color: rgba(255,0,0,0.85);">
                 <h2>Удалить каталог</h2>
             </button>
         </form>
@@ -99,30 +99,32 @@ if (!empty($where_list)) {
         <h1>Заметки</h1>
     </div>
     <div class="content notes">
-        <div class="block note" title="Создать заметку" onclick="location.href='createNote.php?folder=<?php echo $folder_id ?>'">
+        <div class="block note" title="Создать заметку"
+             onclick="location.href='createNote.php?folder=<?php echo $folder_id ?>'">
             <img src="Photos/plus.png" style="width: 5em; margin: 3em; opacity: 0.5;">
         </div>
         <?php if ($final_search_words[0] != "") { ?>
             <?php while ($res_array = mysqli_fetch_array($res_query)) {
-				if (!($res_array['deleted'])) {?>
-                <!-- Search notes-->
-                <div class="block note" title="Редактировать заметку"
-                     style="background: <?php echo $res_array['color']; ?>"
-                     onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
-                    <div>
-                        <div class="note_head">
-                            <h2><?php echo $res_array['title']; ?></h2>
+                if (!($res_array['deleted'])) { ?>
+                    <!-- Search notes-->
+                    <div class="block note" title="Редактировать заметку"
+                         style="background: <?php echo $res_array['color']; ?>"
+                         onclick="location.href='readNote.php?note=<?php echo $res_array["id"]; ?>;'">
+                        <div>
+                            <div class="note_head">
+                                <h2><?php echo $res_array['title']; ?></h2>
+                            </div>
+                            <div class="note_text">
+                                <h3><?php echo $res_array['article']; ?></h3>
+                            </div>
                         </div>
-                        <div class="note_text">
-                            <h3><?php echo $res_array['article']; ?></h3>
+                        <div class="note_date">
+                            <p><?php echo $res_array['created']; ?></p>
                         </div>
                     </div>
-                    <div class="note_date">
-                        <p><?php echo $res_array['created']; ?></p>
-                    </div>
-                </div>
-            <?php }
-        }} else {
+                <?php }
+            }
+        } else {
             while ($note = mysqli_fetch_array($select_note)) {
                 if (!($note['deleted'])) { ?>
                     <!-- Notes -->
@@ -173,7 +175,7 @@ if (!empty($where_list)) {
                     folder: folder,
                 },
                 success: (data) => {
-					console.log(data);
+                    console.log(data);
                     $('.notes').html(data);
                 },
 

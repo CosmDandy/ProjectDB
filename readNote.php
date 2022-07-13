@@ -39,7 +39,6 @@ $edit_note = mysqli_fetch_array($result);
         <img alt="#" src="Photos/logout.png">
     </button>
 </div>
-
 <!-- Main Content -->
 <div class="content_wrapper">
     <div class="content" style="margin-top: 20vh;">

@@ -4,8 +4,7 @@ require_once("Connections/project_con.php");
 $id = $_SESSION['user_id'][0];
 $title = $_POST['title'];
 $color = $_POST['color'];
-if ($title) 
-{
+if ($title) {
     $query = mysqli_query($link, "INSERT INTO folders (title, color, user_id) VALUES ('$title', '$color', '$id')");
 }
 ?>
@@ -64,7 +63,7 @@ if ($title)
         </div>
     </div>
 </div>
-	<div class="menu menu_right">
+<div class="menu menu_right">
     <button></button>
     <div>
         <button type="button" title="Цвет" onclick="Change_bg_Color(1)">
@@ -86,7 +85,7 @@ if ($title)
             <img alt="#" src="Photos/add.png">
         </button>
     </div>
-        <button></button>
+    <button></button>
 </div>
 </body>
 </html>
